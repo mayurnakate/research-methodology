@@ -1,0 +1,328 @@
+{
+  "stations": [
+    {
+      "station_name": "Swargate Central Terminal",
+      "latitude": 18.515,
+      "longitude": 73.848,
+      "route_id": "R101"
+    },
+    {
+      "station_name": "CBD Arterial Hub",
+      "latitude": 18.528,
+      "longitude": 73.864,
+      "route_id": "R101"
+    },
+    {
+      "station_name": "Civic Plaza",
+      "latitude": 18.536,
+      "longitude": 73.845,
+      "route_id": "R101"
+    },
+    {
+      "station_name": "University Junction",
+      "latitude": 18.541,
+      "longitude": 73.829,
+      "route_id": "R101"
+    },
+    {
+      "station_name": "Tech Park Phase 1",
+      "latitude": 18.559,
+      "longitude": 73.807,
+      "route_id": "R101"
+    },
+    {
+      "station_name": "Silicon High-Tech Zone",
+      "latitude": 18.572,
+      "longitude": 73.785,
+      "route_id": "R101"
+    },
+    {
+      "station_name": "South Suburb Depot",
+      "latitude": 18.495,
+      "longitude": 73.84,
+      "route_id": "R102"
+    },
+    {
+      "station_name": "Metropolitan Rail Junction",
+      "latitude": 18.5295,
+      "longitude": 73.8745,
+      "route_id": "R102"
+    },
+    {
+      "station_name": "Koregaon East Hub",
+      "latitude": 18.545,
+      "longitude": 73.89,
+      "route_id": "R102"
+    },
+    {
+      "station_name": "Airport Boulevard Station",
+      "latitude": 18.568,
+      "longitude": 73.91,
+      "route_id": "R102"
+    },
+    {
+      "station_name": "International Airport Terminal",
+      "latitude": 18.58,
+      "longitude": 73.921,
+      "route_id": "R102"
+    },
+    {
+      "station_name": "Hadapsar Industrial Arterial",
+      "latitude": 18.518,
+      "longitude": 73.898,
+      "route_id": "R103"
+    },
+    {
+      "station_name": "Heritage Market Square",
+      "latitude": 18.522,
+      "longitude": 73.86,
+      "route_id": "R104"
+    }
+  ],
+  "routes": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "route_id": "R101",
+          "name": "CBD Express (Central CBD - Tech Park)",
+          "color": "#E63946",
+          "free_flow_speed": 48.0
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              73.848,
+              18.515
+            ],
+            [
+              73.864,
+              18.528
+            ],
+            [
+              73.845,
+              18.536
+            ],
+            [
+              73.829,
+              18.541
+            ],
+            [
+              73.807,
+              18.559
+            ],
+            [
+              73.785,
+              18.572
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "route_id": "R102",
+          "name": "North-South Transit Spine (Rail Terminal - Airport)",
+          "color": "#1D3557",
+          "free_flow_speed": 45.0
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              73.84,
+              18.495
+            ],
+            [
+              73.848,
+              18.515
+            ],
+            [
+              73.8745,
+              18.5295
+            ],
+            [
+              73.89,
+              18.545
+            ],
+            [
+              73.91,
+              18.568
+            ],
+            [
+              73.921,
+              18.58
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "route_id": "R103",
+          "name": "Radial Ring Corridor (East-West Bypass)",
+          "color": "#2A9D8F",
+          "free_flow_speed": 46.0
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              73.807,
+              18.559
+            ],
+            [
+              73.829,
+              18.541
+            ],
+            [
+              73.845,
+              18.536
+            ],
+            [
+              73.8745,
+              18.5295
+            ],
+            [
+              73.898,
+              18.518
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "route_id": "R104",
+          "name": "Downtown Circulator (City Center Loop)",
+          "color": "#F4A261",
+          "free_flow_speed": 35.0
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              73.864,
+              18.528
+            ],
+            [
+              73.8745,
+              18.5295
+            ],
+            [
+              73.86,
+              18.522
+            ],
+            [
+              73.848,
+              18.515
+            ],
+            [
+              73.864,
+              18.528
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "bottlenecks": [
+    {
+      "zone_id": "BN-01",
+      "name": "Central CBD Arterial Intersection",
+      "lat": 18.528,
+      "lon": 73.864,
+      "radius_meters": 350,
+      "peak_speed_reduction": 0.75,
+      "peak_hours": [
+        [
+          8,
+          11
+        ],
+        [
+          17,
+          21
+        ]
+      ],
+      "type": "Signalized Chokepoint & Intersection"
+    },
+    {
+      "zone_id": "BN-02",
+      "name": "Tech Corridor & Flyover Merge Point",
+      "lat": 18.559,
+      "lon": 73.807,
+      "radius_meters": 450,
+      "peak_speed_reduction": 0.82,
+      "peak_hours": [
+        [
+          8,
+          12
+        ],
+        [
+          18,
+          22
+        ]
+      ],
+      "type": "Highway Merge & Weaving Bottleneck"
+    },
+    {
+      "zone_id": "BN-03",
+      "name": "Railway Station & Multimodal Transit Terminal",
+      "lat": 18.5295,
+      "lon": 73.8745,
+      "radius_meters": 400,
+      "peak_speed_reduction": 0.7,
+      "peak_hours": [
+        [
+          7,
+          10
+        ],
+        [
+          16,
+          20
+        ]
+      ],
+      "type": "High Pedestrian & Multi-modal Spillover"
+    },
+    {
+      "zone_id": "BN-04",
+      "name": "University Circle & Radial Junction",
+      "lat": 18.541,
+      "lon": 73.829,
+      "radius_meters": 380,
+      "peak_speed_reduction": 0.65,
+      "peak_hours": [
+        [
+          8,
+          11
+        ],
+        [
+          17,
+          19
+        ]
+      ],
+      "type": "Rotary/Roundabout Capacity Deficiency"
+    },
+    {
+      "zone_id": "BN-05",
+      "name": "Industrial Park River Bridge Crossing",
+      "lat": 18.498,
+      "lon": 73.842,
+      "radius_meters": 500,
+      "peak_speed_reduction": 0.68,
+      "peak_hours": [
+        [
+          7,
+          10
+        ],
+        [
+          17,
+          20
+        ]
+      ],
+      "type": "Narrow Bridge Chokepoint"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "difficulty": 2,
+  "chain_length": 2,
+  "chain": [
+    {
+      "index": 0,
+      "timestamp": "2026-10-29T05:12:17.971898+00:00",
+      "transactions": [
+        {
+          "tx_id": "TX-73e2569b36cc487a",
+          "timestamp": "2026-10-29T05:12:17.971865+00:00",
+          "manuscript_title": "Genesis Block: Academic Integrity & Priority Attestation Network",
+          "document_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "merkle_root": "0000000000000000000000000000000000000000000000000000000000000000",
+          "ipfs_cid": "QmGenesisAcademicIntegrityLedgerInitialState",
+          "author_name": "System / Governance Consensus",
+          "author_address": "0x0000000000000000000000000000000000000000",
+          "signature": "GENESIS_SYSTEM_SIGNATURE",
+          "public_key_pem": "SYSTEM_GENESIS_KEY",
+          "co_authors": "",
+          "affiliation": "Decentralized Science (DeSci) Foundation",
+          "abstract_snippet": "Genesis anchor initializing verifiable priority timestamping for research manuscripts."
+        }
+      ],
+      "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "merkle_root": "66b7ee513d63c14483ab43e3834c2122c57af08845fbabf59fede30fd9d9a3d1",
+      "nonce": 178,
+      "difficulty": 2,
+      "hash": "009b5041e5c31aa570ae8189d696ef6be512128f8fbcef56c3c126744f1da53d"
+    },
+    {
+      "index": 1,
+      "timestamp": "2026-10-29T05:12:18.010974+00:00",
+      "transactions": [
+        {
+          "tx_id": "TX-d824559fec9b41c3",
+          "timestamp": "2026-10-29T05:12:18.010544+00:00",
+          "manuscript_title": "Decentralized Cryptographic Ledger Architecture for Intellectual Property Provenance and Manuscript Time-Stamping in Academic Research",
+          "document_hash": "e420fe25dcf175bce9493b272f65a12ba276c8df93aaad36633dfcaf70e5857f",
+          "merkle_root": "f3d9c9438ed27391fe565f076e81fd46261ca1012406763b347f4f2da9369f9f",
+          "ipfs_cid": "QmdhAqt7PrgiNHeeV7zogWYS2hWaShvd1pw7Lzh8ercP9p",
+          "author_name": "Mayur Sanjay Nakate",
+          "author_address": "0x9a12f1570d93b60a815bababc3022baff98d9feb",
+          "signature": "304502206d557d93a7ee4a803b8d9fe2fd1d955ea3c328c4007195c67415f2fda7e29e51022100e71df464087e45ad06862e56add79a5c7451b4dc2493fbf2b099a348e2568804",
+          "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE5YzEGXKHz5BCVqbSIlaA7fgSCwCH\nyJqd/1pLBJ+wyPj2EVxjssKhF49FGcACAP38Ezq7AFHeMr7bW5uCTw8N8Q==\n-----END PUBLIC KEY-----\n",
+          "co_authors": "Research Collaborator 1, Research Collaborator 2",
+          "affiliation": "Department of Computer Science, Vishwakarma University",
+          "abstract_snippet": "This research introduces a decentralized cryptographic ledger architecture that anchors manuscript pre-submission drafts to an immutable blockchain to establish non-repudiable priority."
+        }
+      ],
+      "previous_hash": "009b5041e5c31aa570ae8189d696ef6be512128f8fbcef56c3c126744f1da53d",
+      "merkle_root": "4382749d5fb04ac8a53494aa0693615b8c764f7e0860ab088ef311dd04ae5e44",
+      "nonce": 149,
+      "difficulty": 2,
+      "hash": "002d45ac3c0da0e3cb22fce961695bda88719cb4cb74714b596dc5176365b5d9"
+    }
+  ]
+}

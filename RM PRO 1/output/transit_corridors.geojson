@@ -1,0 +1,149 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "R101",
+        "name": "CBD Express (Central CBD - Tech Park)",
+        "color": "#E63946",
+        "free_flow_speed": 48.0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            73.848,
+            18.515
+          ],
+          [
+            73.864,
+            18.528
+          ],
+          [
+            73.845,
+            18.536
+          ],
+          [
+            73.829,
+            18.541
+          ],
+          [
+            73.807,
+            18.559
+          ],
+          [
+            73.785,
+            18.572
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "R102",
+        "name": "North-South Transit Spine (Rail Terminal - Airport)",
+        "color": "#1D3557",
+        "free_flow_speed": 45.0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            73.84,
+            18.495
+          ],
+          [
+            73.848,
+            18.515
+          ],
+          [
+            73.8745,
+            18.5295
+          ],
+          [
+            73.89,
+            18.545
+          ],
+          [
+            73.91,
+            18.568
+          ],
+          [
+            73.921,
+            18.58
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "R103",
+        "name": "Radial Ring Corridor (East-West Bypass)",
+        "color": "#2A9D8F",
+        "free_flow_speed": 46.0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            73.807,
+            18.559
+          ],
+          [
+            73.829,
+            18.541
+          ],
+          [
+            73.845,
+            18.536
+          ],
+          [
+            73.8745,
+            18.5295
+          ],
+          [
+            73.898,
+            18.518
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "route_id": "R104",
+        "name": "Downtown Circulator (City Center Loop)",
+        "color": "#F4A261",
+        "free_flow_speed": 35.0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            73.864,
+            18.528
+          ],
+          [
+            73.8745,
+            18.5295
+          ],
+          [
+            73.86,
+            18.522
+          ],
+          [
+            73.848,
+            18.515
+          ],
+          [
+            73.864,
+            18.528
+          ]
+        ]
+      }
+    }
+  ]
+}

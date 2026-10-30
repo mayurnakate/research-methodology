@@ -1,0 +1,187 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "station_name": "Swargate Central Terminal",
+        "route_id": "R101"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.848,
+          18.515
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_name": "CBD Arterial Hub",
+        "route_id": "R101"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.864,
+          18.528
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_name": "Civic Plaza",
+        "route_id": "R101"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.845,
+          18.536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_name": "University Junction",
+        "route_id": "R101"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.829,
+          18.541
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_name": "Tech Park Phase 1",
+        "route_id": "R101"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.807,
+          18.559
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_name": "Silicon High-Tech Zone",
+        "route_id": "R101"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.785,
+          18.572
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_name": "South Suburb Depot",
+        "route_id": "R102"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.84,
+          18.495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_name": "Metropolitan Rail Junction",
+        "route_id": "R102"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8745,
+          18.5295
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_name": "Koregaon East Hub",
+        "route_id": "R102"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.89,
+          18.545
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_name": "Airport Boulevard Station",
+        "route_id": "R102"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.91,
+          18.568
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_name": "International Airport Terminal",
+        "route_id": "R102"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.921,
+          18.58
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_name": "Hadapsar Industrial Arterial",
+        "route_id": "R103"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.898,
+          18.518
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station_name": "Heritage Market Square",
+        "route_id": "R104"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.86,
+          18.522
+        ]
+      }
+    }
+  ]
+}

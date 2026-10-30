@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e15e37b7dec05152bd80601f2eda1ed7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e15e37b7dec05152bd80601f2eda1ed7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e15e37b7dec05152bd80601f2eda1ed7 = L.map(
+                "map_e15e37b7dec05152bd80601f2eda1ed7",
+                {
+                    center: [18.535, 73.85],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_e15e37b7dec05152bd80601f2eda1ed7);
+
+            
+
+        
+    
+            var tile_layer_45fa63c91e386c0a3ccc11a0572015a5 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_45fa63c91e386c0a3ccc11a0572015a5.addTo(map_e15e37b7dec05152bd80601f2eda1ed7);
+        
+    
+            var tile_layer_caecae477eb99295ed6dc1b0996b78a4 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\u0027https://www.openstreetmap.org/copyright\u0027\u003eOpenStreetMap\u003c/a\u003e \u0026copy; \u003ca href=\u0027https://carto.com/attributions\u0027\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_caecae477eb99295ed6dc1b0996b78a4.addTo(map_e15e37b7dec05152bd80601f2eda1ed7);
+        
+    
+            var tile_layer_ee3ceede393c4c841be6cec8d353651a = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\u0027https://www.openstreetmap.org/copyright\u0027\u003eOpenStreetMap\u003c/a\u003e \u0026copy; \u003ca href=\u0027https://carto.com/attributions\u0027\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ee3ceede393c4c841be6cec8d353651a.addTo(map_e15e37b7dec05152bd80601f2eda1ed7);
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topright",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_e15e37b7dec05152bd80601f2eda1ed7);
+        
+    
+            var tile_layer_e7644e13045690cc14c7d14bbf196c03 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detect_retina": false, "max_native_zoom": 19, "max_zoom": 19, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_763ccbc08d1b3d4da71e91bb5700641b = new L.Control.MiniMap(
+                tile_layer_e7644e13045690cc14c7d14bbf196c03,
+                {
+  "position": "bottomright",
+  "width": 150,
+  "height": 150,
+  "collapsedWidth": 25,
+  "collapsedHeight": 25,
+  "zoomLevelOffset": -5,
+  "centerFixed": false,
+  "zoomAnimation": false,
+  "toggleDisplay": true,
+  "autoToggleDisplay": false,
+  "minimized": false,
+}
+            );
+            map_e15e37b7dec05152bd80601f2eda1ed7.addControl(mini_map_763ccbc08d1b3d4da71e91bb5700641b);
+        
+    
+            var feature_group_6100ebb8990445e81655e46a0c4b0cd9 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_81d82e3ad9a1adb9834e7255717a2e0d = L.polyline(
+                [[18.515, 73.848], [18.528, 73.864], [18.536, 73.845], [18.541, 73.829], [18.559, 73.807], [18.572, 73.785]],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": "6, 6", "dashOffset": null, "fill": false, "fillColor": "#E63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_6100ebb8990445e81655e46a0c4b0cd9);
+        
+    
+            poly_line_81d82e3ad9a1adb9834e7255717a2e0d.bindTooltip(
+                `<div>
+                     <b>Transit Route:</b> CBD Express (Central CBD - Tech Park)<br><b>Design Speed:</b> 48.0 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_7d788f54f29a918950c821e9ba33f683 = L.polyline(
+                [[18.495, 73.84], [18.515, 73.848], [18.5295, 73.8745], [18.545, 73.89], [18.568, 73.91], [18.58, 73.921]],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": "6, 6", "dashOffset": null, "fill": false, "fillColor": "#1D3557", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_6100ebb8990445e81655e46a0c4b0cd9);
+        
+    
+            poly_line_7d788f54f29a918950c821e9ba33f683.bindTooltip(
+                `<div>
+                     <b>Transit Route:</b> North-South Transit Spine (Rail Terminal - Airport)<br><b>Design Speed:</b> 45.0 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_76c8a38d37870ec679de5088a9924551 = L.polyline(
+                [[18.559, 73.807], [18.541, 73.829], [18.536, 73.845], [18.5295, 73.8745], [18.518, 73.898]],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": "6, 6", "dashOffset": null, "fill": false, "fillColor": "#2A9D8F", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_6100ebb8990445e81655e46a0c4b0cd9);
+        
+    
+            poly_line_76c8a38d37870ec679de5088a9924551.bindTooltip(
+                `<div>
+                     <b>Transit Route:</b> Radial Ring Corridor (East-West Bypass)<br><b>Design Speed:</b> 46.0 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_5af02a8a47cdd5edb7f3785fd1b801ff = L.polyline(
+                [[18.528, 73.864], [18.5295, 73.8745], [18.522, 73.86], [18.515, 73.848], [18.528, 73.864]],
+                {"bubblingMouseEvents": true, "color": "#F4A261", "dashArray": "6, 6", "dashOffset": null, "fill": false, "fillColor": "#F4A261", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_6100ebb8990445e81655e46a0c4b0cd9);
+        
+    
+            poly_line_5af02a8a47cdd5edb7f3785fd1b801ff.bindTooltip(
+                `<div>
+                     <b>Transit Route:</b> Downtown Circulator (City Center Loop)<br><b>Design Speed:</b> 35.0 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_281201d85a7593436c9738225cc4c8ae = L.circleMarker(
+                [18.515, 73.848],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_6100ebb8990445e81655e46a0c4b0cd9);
+        
+    
+            circle_marker_281201d85a7593436c9738225cc4c8ae.bindTooltip(
+                `<div>
+                     Transit Stop: Swargate Central Terminal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_36637f7bbf83a1fbf7053b9471b87758 = L.circleMarker(
+                [18.528, 73.864],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_6100ebb8990445e81655e46a0c4b0cd9);
+        
+    
+            circle_marker_36637f7bbf83a1fbf7053b9471b87758.bindTooltip(
+                `<div>
+                     Transit Stop: CBD Arterial Hub
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fb29186c98766e5f879bd1ba3489d621 = L.circleMarker(
+                [18.536, 73.845],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_6100ebb8990445e81655e46a0c4b0cd9);
+        
+    
+            circle_marker_fb29186c98766e5f879bd1ba3489d621.bindTooltip(
+                `<div>
+                     Transit Stop: Civic Plaza
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_825b522e7790239354e67742f572d0ba = L.circleMarker(
+                [18.541, 73.829],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_6100ebb8990445e81655e46a0c4b0cd9);
+        
+    
+            circle_marker_825b522e7790239354e67742f572d0ba.bindTooltip(
+                `<div>
+                     Transit Stop: University Junction
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_490c0dbbbdec7b51aaced193e53cf1e3 = L.circleMarker(
+                [18.559, 73.807],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_6100ebb8990445e81655e46a0c4b0cd9);
+        
+    
+            circle_marker_490c0dbbbdec7b51aaced193e53cf1e3.bindTooltip(
+                `<div>
+                     Transit Stop: Tech Park Phase 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_60a0d6e1e5f4b43bbc182842b4c79090 = L.circleMarker(
+                [18.572, 73.785],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_6100ebb8990445e81655e46a0c4b0cd9);
+        
+    
+            circle_marker_60a0d6e1e5f4b43bbc182842b4c79090.bindTooltip(
+                `<div>
+                     Transit Stop: Silicon High-Tech Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2dd49ae3a249bcf9f13e96651ddfad41 = L.circleMarker(
+                [18.495, 73.84],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_6100ebb8990445e81655e46a0c4b0cd9);
+        
+    
+            circle_marker_2dd49ae3a249bcf9f13e96651ddfad41.bindTooltip(
+                `<div>
+                     Transit Stop: South Suburb Depot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_09ba8101da8713b7695e0c78f642c002 = L.circleMarker(
+                [18.5295, 73.8745],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_6100ebb8990445e81655e46a0c4b0cd9);
+        
+    
+            circle_marker_09ba8101da8713b7695e0c78f642c002.bindTooltip(
+                `<div>
+                     Transit Stop: Metropolitan Rail Junction
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c02e595299f586d776f04265d11195c7 = L.circleMarker(
+                [18.545, 73.89],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_6100ebb8990445e81655e46a0c4b0cd9);
+        
+    
+            circle_marker_c02e595299f586d776f04265d11195c7.bindTooltip(
+                `<div>
+                     Transit Stop: Koregaon East Hub
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_37f6031fcf2c7c7960cf0966e415b0ca = L.circleMarker(
+                [18.568, 73.91],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_6100ebb8990445e81655e46a0c4b0cd9);
+        
+    
+            circle_marker_37f6031fcf2c7c7960cf0966e415b0ca.bindTooltip(
+                `<div>
+                     Transit Stop: Airport Boulevard Station
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_12f5034245e65441373f3a32f36a94b1 = L.circleMarker(
+                [18.58, 73.921],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_6100ebb8990445e81655e46a0c4b0cd9);
+        
+    
+            circle_marker_12f5034245e65441373f3a32f36a94b1.bindTooltip(
+                `<div>
+                     Transit Stop: International Airport Terminal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3adf684467123ca4a59f6954ca5e3ecc = L.circleMarker(
+                [18.518, 73.898],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_6100ebb8990445e81655e46a0c4b0cd9);
+        
+    
+            circle_marker_3adf684467123ca4a59f6954ca5e3ecc.bindTooltip(
+                `<div>
+                     Transit Stop: Hadapsar Industrial Arterial
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1f03a9a6a614df8d4e63ee2b0e71ddaf = L.circleMarker(
+                [18.522, 73.86],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_6100ebb8990445e81655e46a0c4b0cd9);
+        
+    
+            circle_marker_1f03a9a6a614df8d4e63ee2b0e71ddaf.bindTooltip(
+                `<div>
+                     Transit Stop: Heritage Market Square
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_6100ebb8990445e81655e46a0c4b0cd9.addTo(map_e15e37b7dec05152bd80601f2eda1ed7);
+        
+    
+            var feature_group_b682d95faef698e10b8a476071d78493 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_e6f42dc6a8b31412457f5fd12606e4b7 = L.circle(
+                [18.558853, 73.807109],
+                {"bubblingMouseEvents": true, "color": "#D50000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D50000", "fillOpacity": 0.25, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 140.8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b682d95faef698e10b8a476071d78493);
+        
+    
+        var popup_f0f89f67294f6629e8ef73a0ad32faf6 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_56e036d3254846662d39b63d157f60e8 = $(`<div id="html_56e036d3254846662d39b63d157f60e8" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 250px;">             <h4 style="margin: 0 0 5px 0; color: #D50000;">BN-CLUSTER-01</h4>             <b>Classification:</b> Persistent Structural Chokepoint<br>             <b>Severity Score:</b> <b>143.5</b><br>             <b>Avg Bottleneck Speed:</b> 8.2 km/h<br>             <b>Speed Performance Index:</b> 17.4%<br>             <b>Delay Rate Deficit:</b> +449 sec/km<br>             <b>Peak Active Hours:</b> 8, 9, 10, 11, 18, 19, 20, 21<br>             <b>Impacted Transit Lines:</b> R101, R103<br>             <b>Impact Radius:</b> 140.8 m         </div>         </div>`)[0];
+                popup_f0f89f67294f6629e8ef73a0ad32faf6.setContent(html_56e036d3254846662d39b63d157f60e8);
+            
+        
+
+        circle_e6f42dc6a8b31412457f5fd12606e4b7.bindPopup(popup_f0f89f67294f6629e8ef73a0ad32faf6)
+        ;
+
+        
+    
+    
+            circle_e6f42dc6a8b31412457f5fd12606e4b7.bindTooltip(
+                `<div>
+                     Bottleneck: BN-CLUSTER-01 (Severity: 143.5)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_970f75a5c703a6dddbf03170f844c63d = L.marker(
+                [18.558853, 73.807109],
+                {
+}
+            ).addTo(feature_group_b682d95faef698e10b8a476071d78493);
+        
+    
+            var icon_7b38570fbaeec4c013d2a841ceb38c67 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_970f75a5c703a6dddbf03170f844c63d.bindTooltip(
+                `<div>
+                     BN-CLUSTER-01: Persistent Structural Chokepoint
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_970f75a5c703a6dddbf03170f844c63d.setIcon(icon_7b38570fbaeec4c013d2a841ceb38c67);
+            
+    
+            var circle_a19ce1556319eff73684e496fbf98479 = L.circle(
+                [18.527926, 73.863809],
+                {"bubblingMouseEvents": true, "color": "#D50000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D50000", "fillOpacity": 0.25, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 120.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b682d95faef698e10b8a476071d78493);
+        
+    
+        var popup_0a5be2be6b718d25ed9127e72edcfb3f = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_1ff9615cf8ee92dca6fd05815d66754b = $(`<div id="html_1ff9615cf8ee92dca6fd05815d66754b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 250px;">             <h4 style="margin: 0 0 5px 0; color: #D50000;">BN-CLUSTER-03</h4>             <b>Classification:</b> Persistent Structural Chokepoint<br>             <b>Severity Score:</b> <b>122.7</b><br>             <b>Avg Bottleneck Speed:</b> 7.6 km/h<br>             <b>Speed Performance Index:</b> 18.2%<br>             <b>Delay Rate Deficit:</b> +484 sec/km<br>             <b>Peak Active Hours:</b> 8, 9, 10, 17, 18, 19, 20<br>             <b>Impacted Transit Lines:</b> R101, R104<br>             <b>Impact Radius:</b> 120.0 m         </div>         </div>`)[0];
+                popup_0a5be2be6b718d25ed9127e72edcfb3f.setContent(html_1ff9615cf8ee92dca6fd05815d66754b);
+            
+        
+
+        circle_a19ce1556319eff73684e496fbf98479.bindPopup(popup_0a5be2be6b718d25ed9127e72edcfb3f)
+        ;
+
+        
+    
+    
+            circle_a19ce1556319eff73684e496fbf98479.bindTooltip(
+                `<div>
+                     Bottleneck: BN-CLUSTER-03 (Severity: 122.7)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_76ca0ecf7be0af889764b4e25b1d28ef = L.marker(
+                [18.527926, 73.863809],
+                {
+}
+            ).addTo(feature_group_b682d95faef698e10b8a476071d78493);
+        
+    
+            var icon_c13613a44707a9ac643da24186f59564 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_76ca0ecf7be0af889764b4e25b1d28ef.bindTooltip(
+                `<div>
+                     BN-CLUSTER-03: Persistent Structural Chokepoint
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_76ca0ecf7be0af889764b4e25b1d28ef.setIcon(icon_c13613a44707a9ac643da24186f59564);
+            
+    
+            var circle_370d7475a12458647bc0d8d48f6f8789 = L.circle(
+                [18.529445, 73.874259],
+                {"bubblingMouseEvents": true, "color": "#D50000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D50000", "fillOpacity": 0.25, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 120.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b682d95faef698e10b8a476071d78493);
+        
+    
+        var popup_31ba346cc0cd866ce68a59d725f051bf = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_49a55f054cecb0e95fbeea3131df62eb = $(`<div id="html_49a55f054cecb0e95fbeea3131df62eb" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 250px;">             <h4 style="margin: 0 0 5px 0; color: #D50000;">BN-CLUSTER-04</h4>             <b>Classification:</b> Persistent Structural Chokepoint<br>             <b>Severity Score:</b> <b>122.1</b><br>             <b>Avg Bottleneck Speed:</b> 8.1 km/h<br>             <b>Speed Performance Index:</b> 19.6%<br>             <b>Delay Rate Deficit:</b> +448 sec/km<br>             <b>Peak Active Hours:</b> 7, 8, 9, 16, 17, 18, 19<br>             <b>Impacted Transit Lines:</b> R102, R103, R104<br>             <b>Impact Radius:</b> 120.0 m         </div>         </div>`)[0];
+                popup_31ba346cc0cd866ce68a59d725f051bf.setContent(html_49a55f054cecb0e95fbeea3131df62eb);
+            
+        
+
+        circle_370d7475a12458647bc0d8d48f6f8789.bindPopup(popup_31ba346cc0cd866ce68a59d725f051bf)
+        ;
+
+        
+    
+    
+            circle_370d7475a12458647bc0d8d48f6f8789.bindTooltip(
+                `<div>
+                     Bottleneck: BN-CLUSTER-04 (Severity: 122.1)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3fa4fd4d8e234a5775095beff262fb01 = L.marker(
+                [18.529445, 73.874259],
+                {
+}
+            ).addTo(feature_group_b682d95faef698e10b8a476071d78493);
+        
+    
+            var icon_5d181707a639e2f31b44894f1420bc0f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_3fa4fd4d8e234a5775095beff262fb01.bindTooltip(
+                `<div>
+                     BN-CLUSTER-04: Persistent Structural Chokepoint
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3fa4fd4d8e234a5775095beff262fb01.setIcon(icon_5d181707a639e2f31b44894f1420bc0f);
+            
+    
+            var circle_61a2458fbe2e856e2edb5b99066ec8ff = L.circle(
+                [18.54109, 73.82903],
+                {"bubblingMouseEvents": true, "color": "#D50000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D50000", "fillOpacity": 0.25, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 120.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b682d95faef698e10b8a476071d78493);
+        
+    
+        var popup_3010b0ac98a693e17fcdf1b5062c413e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_7bb979a684a703ef17df6c73342f3e8f = $(`<div id="html_7bb979a684a703ef17df6c73342f3e8f" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 250px;">             <h4 style="margin: 0 0 5px 0; color: #D50000;">BN-CLUSTER-02</h4>             <b>Classification:</b> Persistent Structural Chokepoint<br>             <b>Severity Score:</b> <b>76.2</b><br>             <b>Avg Bottleneck Speed:</b> 9.6 km/h<br>             <b>Speed Performance Index:</b> 20.3%<br>             <b>Delay Rate Deficit:</b> +367 sec/km<br>             <b>Peak Active Hours:</b> 8, 9, 10, 17, 18<br>             <b>Impacted Transit Lines:</b> R101, R103<br>             <b>Impact Radius:</b> 120.0 m         </div>         </div>`)[0];
+                popup_3010b0ac98a693e17fcdf1b5062c413e.setContent(html_7bb979a684a703ef17df6c73342f3e8f);
+            
+        
+
+        circle_61a2458fbe2e856e2edb5b99066ec8ff.bindPopup(popup_3010b0ac98a693e17fcdf1b5062c413e)
+        ;
+
+        
+    
+    
+            circle_61a2458fbe2e856e2edb5b99066ec8ff.bindTooltip(
+                `<div>
+                     Bottleneck: BN-CLUSTER-02 (Severity: 76.2)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_45a308f71ef929f1f02c39290a6b4af8 = L.marker(
+                [18.54109, 73.82903],
+                {
+}
+            ).addTo(feature_group_b682d95faef698e10b8a476071d78493);
+        
+    
+            var icon_73648a38bae1f898fd06f979653b82d0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_45a308f71ef929f1f02c39290a6b4af8.bindTooltip(
+                `<div>
+                     BN-CLUSTER-02: Persistent Structural Chokepoint
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_45a308f71ef929f1f02c39290a6b4af8.setIcon(icon_73648a38bae1f898fd06f979653b82d0);
+            
+    
+            var circle_a08a8c90196cb5c177b064be379fea75 = L.circle(
+                [18.498212, 73.84123],
+                {"bubblingMouseEvents": true, "color": "#D50000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D50000", "fillOpacity": 0.25, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 126.5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b682d95faef698e10b8a476071d78493);
+        
+    
+        var popup_843c5a8790143c5faedea90c4bd4b0d3 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_d6268d1a178a59e7b320ea9b8ed998bc = $(`<div id="html_d6268d1a178a59e7b320ea9b8ed998bc" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 250px;">             <h4 style="margin: 0 0 5px 0; color: #D50000;">BN-CLUSTER-05</h4>             <b>Classification:</b> Persistent Structural Chokepoint<br>             <b>Severity Score:</b> <b>63.4</b><br>             <b>Avg Bottleneck Speed:</b> 11.4 km/h<br>             <b>Speed Performance Index:</b> 25.3%<br>             <b>Delay Rate Deficit:</b> +260 sec/km<br>             <b>Peak Active Hours:</b> 8, 9, 17, 18, 19<br>             <b>Impacted Transit Lines:</b> R102<br>             <b>Impact Radius:</b> 126.5 m         </div>         </div>`)[0];
+                popup_843c5a8790143c5faedea90c4bd4b0d3.setContent(html_d6268d1a178a59e7b320ea9b8ed998bc);
+            
+        
+
+        circle_a08a8c90196cb5c177b064be379fea75.bindPopup(popup_843c5a8790143c5faedea90c4bd4b0d3)
+        ;
+
+        
+    
+    
+            circle_a08a8c90196cb5c177b064be379fea75.bindTooltip(
+                `<div>
+                     Bottleneck: BN-CLUSTER-05 (Severity: 63.4)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_72f3a0d01535afca13861d0ff1421cb1 = L.marker(
+                [18.498212, 73.84123],
+                {
+}
+            ).addTo(feature_group_b682d95faef698e10b8a476071d78493);
+        
+    
+            var icon_db75785488cac1c3cb4420cc936727cf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_72f3a0d01535afca13861d0ff1421cb1.bindTooltip(
+                `<div>
+                     BN-CLUSTER-05: Persistent Structural Chokepoint
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_72f3a0d01535afca13861d0ff1421cb1.setIcon(icon_db75785488cac1c3cb4420cc936727cf);
+            
+    
+            feature_group_b682d95faef698e10b8a476071d78493.addTo(map_e15e37b7dec05152bd80601f2eda1ed7);
+        
+</script>
+</html>

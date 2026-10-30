@@ -1,0 +1,67 @@
+{
+  "hashing_throughput": {
+    "sha256": {
+      "elapsed_seconds": 0.0625,
+      "throughput_mb_s": 799.85,
+      "avg_latency_ms_per_mb": 1.25
+    },
+    "sha3_256": {
+      "elapsed_seconds": 0.2962,
+      "throughput_mb_s": 168.8,
+      "avg_latency_ms_per_mb": 5.924
+    },
+    "blake2b": {
+      "elapsed_seconds": 0.179,
+      "throughput_mb_s": 279.39,
+      "avg_latency_ms_per_mb": 3.579
+    }
+  },
+  "merkle_scaling": {
+    "10": {
+      "tree_build_ms": 0.123,
+      "proof_length_hashes": 4,
+      "proof_verify_ms": 0.0242
+    },
+    "50": {
+      "tree_build_ms": 0.43,
+      "proof_length_hashes": 6,
+      "proof_verify_ms": 0.0255
+    },
+    "100": {
+      "tree_build_ms": 0.912,
+      "proof_length_hashes": 7,
+      "proof_verify_ms": 0.0233
+    },
+    "250": {
+      "tree_build_ms": 2.155,
+      "proof_length_hashes": 8,
+      "proof_verify_ms": 0.0295
+    },
+    "500": {
+      "tree_build_ms": 4.076,
+      "proof_length_hashes": 9,
+      "proof_verify_ms": 0.0267
+    },
+    "1000": {
+      "tree_build_ms": 8.671,
+      "proof_length_hashes": 10,
+      "proof_verify_ms": 0.0347
+    },
+    "2000": {
+      "tree_build_ms": 17.347,
+      "proof_length_hashes": 11,
+      "proof_verify_ms": 0.0324
+    }
+  },
+  "ecdsa": {
+    "signing_latency_ms": 0.073,
+    "verification_latency_ms": 0.239,
+    "ops_per_second_sign": 13768.5,
+    "ops_per_second_verify": 4186.1
+  },
+  "tamper_sensitivity": {
+    "differing_bits": 123,
+    "avalanche_percentage": 48.05,
+    "detection_rate": "100.0%"
+  }
+}

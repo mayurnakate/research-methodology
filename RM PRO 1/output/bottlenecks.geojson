@@ -1,0 +1,150 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "bottleneck_id": "BN-CLUSTER-01",
+        "centroid_lat": 18.558853,
+        "centroid_lon": 73.807109,
+        "radius_meters": 140.8,
+        "total_congested_points": 675,
+        "impacted_vehicles_count": 14,
+        "impacted_routes": "R101, R103",
+        "avg_speed_kmh": 8.24,
+        "min_speed_kmh": 3.5,
+        "avg_spi": 17.4,
+        "avg_tci": 0.826,
+        "avg_delay_rate_sec_km": 449.0,
+        "peak_hour": 20,
+        "active_hours": "8, 9, 10, 11, 18, 19, 20, 21",
+        "active_hours_count": 8,
+        "severity_score": 143.54,
+        "classification": "Persistent Structural Chokepoint"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.807109,
+          18.558853
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "bottleneck_id": "BN-CLUSTER-02",
+        "centroid_lat": 18.54109,
+        "centroid_lon": 73.82903,
+        "radius_meters": 120.0,
+        "total_congested_points": 310,
+        "impacted_vehicles_count": 14,
+        "impacted_routes": "R101, R103",
+        "avg_speed_kmh": 9.56,
+        "min_speed_kmh": 3.5,
+        "avg_spi": 20.32,
+        "avg_tci": 0.797,
+        "avg_delay_rate_sec_km": 367.4,
+        "peak_hour": 10,
+        "active_hours": "8, 9, 10, 17, 18",
+        "active_hours_count": 5,
+        "severity_score": 76.22,
+        "classification": "Persistent Structural Chokepoint"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.82903,
+          18.54109
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "bottleneck_id": "BN-CLUSTER-03",
+        "centroid_lat": 18.527926,
+        "centroid_lon": 73.863809,
+        "radius_meters": 120.0,
+        "total_congested_points": 620,
+        "impacted_vehicles_count": 13,
+        "impacted_routes": "R101, R104",
+        "avg_speed_kmh": 7.61,
+        "min_speed_kmh": 3.5,
+        "avg_spi": 18.24,
+        "avg_tci": 0.818,
+        "avg_delay_rate_sec_km": 484.4,
+        "peak_hour": 10,
+        "active_hours": "8, 9, 10, 17, 18, 19, 20",
+        "active_hours_count": 7,
+        "severity_score": 122.69,
+        "classification": "Persistent Structural Chokepoint"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.863809,
+          18.527926
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "bottleneck_id": "BN-CLUSTER-04",
+        "centroid_lat": 18.529445,
+        "centroid_lon": 73.874259,
+        "radius_meters": 120.0,
+        "total_congested_points": 666,
+        "impacted_vehicles_count": 18,
+        "impacted_routes": "R102, R103, R104",
+        "avg_speed_kmh": 8.06,
+        "min_speed_kmh": 3.5,
+        "avg_spi": 19.56,
+        "avg_tci": 0.804,
+        "avg_delay_rate_sec_km": 448.4,
+        "peak_hour": 17,
+        "active_hours": "7, 8, 9, 16, 17, 18, 19",
+        "active_hours_count": 7,
+        "severity_score": 122.06,
+        "classification": "Persistent Structural Chokepoint"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.874259,
+          18.529445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "bottleneck_id": "BN-CLUSTER-05",
+        "centroid_lat": 18.498212,
+        "centroid_lon": 73.84123,
+        "radius_meters": 126.5,
+        "total_congested_points": 161,
+        "impacted_vehicles_count": 7,
+        "impacted_routes": "R102",
+        "avg_speed_kmh": 11.37,
+        "min_speed_kmh": 3.9,
+        "avg_spi": 25.27,
+        "avg_tci": 0.747,
+        "avg_delay_rate_sec_km": 260.2,
+        "peak_hour": 18,
+        "active_hours": "8, 9, 17, 18, 19",
+        "active_hours_count": 5,
+        "severity_score": 63.36,
+        "classification": "Persistent Structural Chokepoint"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.84123,
+          18.498212
+        ]
+      }
+    }
+  ]
+}

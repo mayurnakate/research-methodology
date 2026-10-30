@@ -1,0 +1,6 @@
+bottleneck_id,centroid_lat,centroid_lon,radius_meters,total_congested_points,impacted_vehicles_count,impacted_routes,avg_speed_kmh,min_speed_kmh,avg_spi,avg_tci,avg_delay_rate_sec_km,peak_hour,active_hours,active_hours_count,severity_score,classification
+BN-CLUSTER-01,18.558853,73.807109,140.8,675,14,"R101, R103",8.24,3.5,17.4,0.826,449.0,20,"8, 9, 10, 11, 18, 19, 20, 21",8,143.54,Persistent Structural Chokepoint
+BN-CLUSTER-03,18.527926,73.863809,120.0,620,13,"R101, R104",7.61,3.5,18.24,0.818,484.4,10,"8, 9, 10, 17, 18, 19, 20",7,122.69,Persistent Structural Chokepoint
+BN-CLUSTER-04,18.529445,73.874259,120.0,666,18,"R102, R103, R104",8.06,3.5,19.56,0.804,448.4,17,"7, 8, 9, 16, 17, 18, 19",7,122.06,Persistent Structural Chokepoint
+BN-CLUSTER-02,18.54109,73.82903,120.0,310,14,"R101, R103",9.56,3.5,20.32,0.797,367.4,10,"8, 9, 10, 17, 18",5,76.22,Persistent Structural Chokepoint
+BN-CLUSTER-05,18.498212,73.84123,126.5,161,7,R102,11.37,3.9,25.27,0.747,260.2,18,"8, 9, 17, 18, 19",5,63.36,Persistent Structural Chokepoint

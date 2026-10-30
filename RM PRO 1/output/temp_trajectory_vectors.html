@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_98b74fb001664dd71cf43a68ca382cab {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.1.2/dist/leaflet-ant-path.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_98b74fb001664dd71cf43a68ca382cab" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_98b74fb001664dd71cf43a68ca382cab = L.map(
+                "map_98b74fb001664dd71cf43a68ca382cab",
+                {
+                    center: [18.535, 73.85],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_98b74fb001664dd71cf43a68ca382cab);
+
+            
+
+        
+    
+            var tile_layer_a4141ac32997844ce1b64553dd2ab7df = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a4141ac32997844ce1b64553dd2ab7df.addTo(map_98b74fb001664dd71cf43a68ca382cab);
+        
+    
+            var tile_layer_0ec7e53b20de0ecfcc8268e7cb83a2b6 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\u0027https://www.openstreetmap.org/copyright\u0027\u003eOpenStreetMap\u003c/a\u003e \u0026copy; \u003ca href=\u0027https://carto.com/attributions\u0027\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0ec7e53b20de0ecfcc8268e7cb83a2b6.addTo(map_98b74fb001664dd71cf43a68ca382cab);
+        
+    
+            var tile_layer_a967da966878ed8b58b8aec0d0212ece = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\u0027https://www.openstreetmap.org/copyright\u0027\u003eOpenStreetMap\u003c/a\u003e \u0026copy; \u003ca href=\u0027https://carto.com/attributions\u0027\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a967da966878ed8b58b8aec0d0212ece.addTo(map_98b74fb001664dd71cf43a68ca382cab);
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topright",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_98b74fb001664dd71cf43a68ca382cab);
+        
+    
+            var tile_layer_a6d0db52fa7662bb75a81311503e0863 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detect_retina": false, "max_native_zoom": 19, "max_zoom": 19, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_93717f7a1899bf5ada39a4a43a9c9f36 = new L.Control.MiniMap(
+                tile_layer_a6d0db52fa7662bb75a81311503e0863,
+                {
+  "position": "bottomright",
+  "width": 150,
+  "height": 150,
+  "collapsedWidth": 25,
+  "collapsedHeight": 25,
+  "zoomLevelOffset": -5,
+  "centerFixed": false,
+  "zoomAnimation": false,
+  "toggleDisplay": true,
+  "autoToggleDisplay": false,
+  "minimized": false,
+}
+            );
+            map_98b74fb001664dd71cf43a68ca382cab.addControl(mini_map_93717f7a1899bf5ada39a4a43a9c9f36);
+        
+    
+            var feature_group_35eaa87cfbf5c4e61c5ee457474429b2 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_e43332efe60792a33f62cf6bc699e8e6 = L.polyline(
+                [[18.515, 73.848], [18.528, 73.864], [18.536, 73.845], [18.541, 73.829], [18.559, 73.807], [18.572, 73.785]],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": "6, 6", "dashOffset": null, "fill": false, "fillColor": "#E63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_35eaa87cfbf5c4e61c5ee457474429b2);
+        
+    
+            poly_line_e43332efe60792a33f62cf6bc699e8e6.bindTooltip(
+                `<div>
+                     <b>Transit Route:</b> CBD Express (Central CBD - Tech Park)<br><b>Design Speed:</b> 48.0 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_6a64f9f14c8e0658332608ac2636a3e8 = L.polyline(
+                [[18.495, 73.84], [18.515, 73.848], [18.5295, 73.8745], [18.545, 73.89], [18.568, 73.91], [18.58, 73.921]],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": "6, 6", "dashOffset": null, "fill": false, "fillColor": "#1D3557", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_35eaa87cfbf5c4e61c5ee457474429b2);
+        
+    
+            poly_line_6a64f9f14c8e0658332608ac2636a3e8.bindTooltip(
+                `<div>
+                     <b>Transit Route:</b> North-South Transit Spine (Rail Terminal - Airport)<br><b>Design Speed:</b> 45.0 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_5401511be4f3452bf66b6f8b0734afa6 = L.polyline(
+                [[18.559, 73.807], [18.541, 73.829], [18.536, 73.845], [18.5295, 73.8745], [18.518, 73.898]],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": "6, 6", "dashOffset": null, "fill": false, "fillColor": "#2A9D8F", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_35eaa87cfbf5c4e61c5ee457474429b2);
+        
+    
+            poly_line_5401511be4f3452bf66b6f8b0734afa6.bindTooltip(
+                `<div>
+                     <b>Transit Route:</b> Radial Ring Corridor (East-West Bypass)<br><b>Design Speed:</b> 46.0 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_89edb67b038bf54d7d10524ecc942045 = L.polyline(
+                [[18.528, 73.864], [18.5295, 73.8745], [18.522, 73.86], [18.515, 73.848], [18.528, 73.864]],
+                {"bubblingMouseEvents": true, "color": "#F4A261", "dashArray": "6, 6", "dashOffset": null, "fill": false, "fillColor": "#F4A261", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(feature_group_35eaa87cfbf5c4e61c5ee457474429b2);
+        
+    
+            poly_line_89edb67b038bf54d7d10524ecc942045.bindTooltip(
+                `<div>
+                     <b>Transit Route:</b> Downtown Circulator (City Center Loop)<br><b>Design Speed:</b> 35.0 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_728a72c5936fb89129d197fb5b5be308 = L.circleMarker(
+                [18.515, 73.848],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_35eaa87cfbf5c4e61c5ee457474429b2);
+        
+    
+            circle_marker_728a72c5936fb89129d197fb5b5be308.bindTooltip(
+                `<div>
+                     Transit Stop: Swargate Central Terminal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6985ad0aed490d9049861cc95705e3e7 = L.circleMarker(
+                [18.528, 73.864],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_35eaa87cfbf5c4e61c5ee457474429b2);
+        
+    
+            circle_marker_6985ad0aed490d9049861cc95705e3e7.bindTooltip(
+                `<div>
+                     Transit Stop: CBD Arterial Hub
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e58350588459dbe1e4e0382f55aa3ae2 = L.circleMarker(
+                [18.536, 73.845],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_35eaa87cfbf5c4e61c5ee457474429b2);
+        
+    
+            circle_marker_e58350588459dbe1e4e0382f55aa3ae2.bindTooltip(
+                `<div>
+                     Transit Stop: Civic Plaza
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b495004bd94f866a481a601e80e576f0 = L.circleMarker(
+                [18.541, 73.829],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_35eaa87cfbf5c4e61c5ee457474429b2);
+        
+    
+            circle_marker_b495004bd94f866a481a601e80e576f0.bindTooltip(
+                `<div>
+                     Transit Stop: University Junction
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4bd27d5115c5c70eae537851028fe53e = L.circleMarker(
+                [18.559, 73.807],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_35eaa87cfbf5c4e61c5ee457474429b2);
+        
+    
+            circle_marker_4bd27d5115c5c70eae537851028fe53e.bindTooltip(
+                `<div>
+                     Transit Stop: Tech Park Phase 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_047349e5a6e4eda0a6c0b82f4782c6b3 = L.circleMarker(
+                [18.572, 73.785],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_35eaa87cfbf5c4e61c5ee457474429b2);
+        
+    
+            circle_marker_047349e5a6e4eda0a6c0b82f4782c6b3.bindTooltip(
+                `<div>
+                     Transit Stop: Silicon High-Tech Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_282c6ccdf7caf1285f82a378a9b76f0a = L.circleMarker(
+                [18.495, 73.84],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_35eaa87cfbf5c4e61c5ee457474429b2);
+        
+    
+            circle_marker_282c6ccdf7caf1285f82a378a9b76f0a.bindTooltip(
+                `<div>
+                     Transit Stop: South Suburb Depot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_463781afe0bb420c5b0bca2293cf892a = L.circleMarker(
+                [18.5295, 73.8745],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_35eaa87cfbf5c4e61c5ee457474429b2);
+        
+    
+            circle_marker_463781afe0bb420c5b0bca2293cf892a.bindTooltip(
+                `<div>
+                     Transit Stop: Metropolitan Rail Junction
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ac2617274e5fcc94e9f68ea77be8d766 = L.circleMarker(
+                [18.545, 73.89],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_35eaa87cfbf5c4e61c5ee457474429b2);
+        
+    
+            circle_marker_ac2617274e5fcc94e9f68ea77be8d766.bindTooltip(
+                `<div>
+                     Transit Stop: Koregaon East Hub
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_36ce3b32b88841a56dcbac70205e1eed = L.circleMarker(
+                [18.568, 73.91],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_35eaa87cfbf5c4e61c5ee457474429b2);
+        
+    
+            circle_marker_36ce3b32b88841a56dcbac70205e1eed.bindTooltip(
+                `<div>
+                     Transit Stop: Airport Boulevard Station
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_22e4a9849e82bd229c1e3615027a786c = L.circleMarker(
+                [18.58, 73.921],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_35eaa87cfbf5c4e61c5ee457474429b2);
+        
+    
+            circle_marker_22e4a9849e82bd229c1e3615027a786c.bindTooltip(
+                `<div>
+                     Transit Stop: International Airport Terminal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_08fef4d31591a0154b905e23bb84ed46 = L.circleMarker(
+                [18.518, 73.898],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_35eaa87cfbf5c4e61c5ee457474429b2);
+        
+    
+            circle_marker_08fef4d31591a0154b905e23bb84ed46.bindTooltip(
+                `<div>
+                     Transit Stop: Hadapsar Industrial Arterial
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1fbd8f4b6c0ada33d64a02ea82b3baeb = L.circleMarker(
+                [18.522, 73.86],
+                {"bubblingMouseEvents": true, "color": "#1D3557", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFFFF", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(feature_group_35eaa87cfbf5c4e61c5ee457474429b2);
+        
+    
+            circle_marker_1fbd8f4b6c0ada33d64a02ea82b3baeb.bindTooltip(
+                `<div>
+                     Transit Stop: Heritage Market Square
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_35eaa87cfbf5c4e61c5ee457474429b2.addTo(map_98b74fb001664dd71cf43a68ca382cab);
+        
+    
+            var feature_group_d2c71589e8a398e4bbbcc44590224298 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            ant_path_6f4b6ceaac26295b4049cde2781e2099 = L.polyline.antPath(
+              [[18.572, 73.785], [18.570488, 73.787367], [18.568686, 73.79022], [18.567202, 73.792618], [18.565738, 73.795041], [18.564585, 73.796999], [18.563164, 73.79947], [18.562042, 73.801465], [18.56093, 73.803471], [18.559826, 73.805486], [18.559275, 73.806495], [18.559, 73.807], [18.558629, 73.807434], [18.558258, 73.807868], [18.557516, 73.808736], [18.556405, 73.810037], [18.554565, 73.812205], [18.553105, 73.813937], [18.551303, 73.8161], [18.549527, 73.818258], [18.548126, 73.819982], [18.546399, 73.822133], [18.544696, 73.824281], [18.542675, 73.826856], [18.541, 73.829], [18.540814, 73.829581], [18.540628, 73.830162], [18.540258, 73.831321], [18.539526, 73.833622], [18.538635, 73.836442], [18.537781, 73.839184], [18.537121, 73.841326], [18.536477, 73.843432], [18.535792, 73.84555], [18.534748, 73.848293], [18.533688, 73.851012], [18.532604, 73.853693], [18.53149, 73.856327], [18.530346, 73.858916], [18.529414, 73.86096], [18.528473, 73.862988], [18.528, 73.864], [18.527674, 73.863568], [18.527348, 73.863135], [18.526695, 73.86227], [18.525378, 73.860541], [18.524039, 73.858811], [18.522325, 73.856649], [18.520557, 73.854486], [18.518739, 73.852324], [18.517254, 73.850595], [18.515377, 73.848432], [18.515, 73.848], [18.51688, 73.850162], [18.518739, 73.852324], [18.520557, 73.854486], [18.521975, 73.856216], [18.5237, 73.858378], [18.525378, 73.860541], [18.526695, 73.86227], [18.528, 73.864], [18.528236, 73.863494], [18.528473, 73.862988], [18.52918, 73.861468], [18.530115, 73.859429], [18.531263, 73.856848], [18.532384, 73.854224], [18.533258, 73.85209], [18.534326, 73.849384], [18.535167, 73.847197], [18.536159, 73.844478], [18.536959, 73.841855], [18.537781, 73.839184], [18.538635, 73.836442], [18.539526, 73.833622], [18.540443, 73.830742], [18.541335, 73.828571], [18.541669, 73.828142], [18.542339, 73.827285], [18.543346, 73.825998], [18.544696, 73.824281], [18.546057, 73.822563], [18.547432, 73.820843], [18.549175, 73.818689], [18.550945, 73.816532], [18.553105, 73.813937], [18.554931, 73.811772], [18.556775, 73.809604], [18.558258, 73.807868], [18.558629, 73.807434], [18.559, 73.807], [18.559275, 73.806495], [18.55955, 73.805991], [18.559826, 73.805486], [18.560654, 73.803974], [18.561763, 73.801965], [18.563164, 73.79947], [18.564585, 73.796999], [18.566029, 73.794554], [18.567497, 73.792137], [18.568985, 73.789743], [18.570488, 73.787367]],
+              {
+  "stroke": true,
+  "color": "#E63946",
+  "weight": 3.5,
+  "opacity": 0.8,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#E63946",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1000,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+            ant_path_6f4b6ceaac26295b4049cde2781e2099.bindTooltip(
+                `<div>
+                     <b>Vehicle:</b> BUS-R101-01<br><b>Route:</b> CBD Express (Central CBD - Tech Park)<br><b>Avg Speed:</b> 28.4 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c55ee1b1f2262d20a7a2d6020f6091f8 = L.circleMarker(
+                [18.570488, 73.787367],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+        var popup_9d4e80b9e0a0a6f0dd9a2370da1238c1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a28a620a249f13ae797351fae733d2e2 = $(`<div id="html_a28a620a249f13ae797351fae733d2e2" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 220px;">             <h4 style="margin: 0 0 5px 0; color: #1D3557;">Bus BUS-R101-01</h4>             <b>Route:</b> CBD Express (Central CBD - Tech Park)<br>             <b>Instant Speed:</b> <span style="font-weight: bold; color: green;">31.5 km/h</span> (SPI: 65.7%)<br>             <b>Congestion State:</b> Mild Slowdown<br>             <b>Schedule Delay:</b> 162 sec<br>             <b>Passenger Load:</b> 37 pax<br>             <b>Segment:</b> Tech Park Phase 1 &rarr; Silicon High-Tech Zone         </div>         </div>`)[0];
+                popup_9d4e80b9e0a0a6f0dd9a2370da1238c1.setContent(html_a28a620a249f13ae797351fae733d2e2);
+            
+        
+
+        circle_marker_c55ee1b1f2262d20a7a2d6020f6091f8.bindPopup(popup_9d4e80b9e0a0a6f0dd9a2370da1238c1)
+        ;
+
+        
+    
+    
+            circle_marker_c55ee1b1f2262d20a7a2d6020f6091f8.bindTooltip(
+                `<div>
+                     BUS-R101-01 (31.5 km/h)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_7a3b105f5251bbcd6d239e9dd170f939 = L.polyline.antPath(
+              [[18.515, 73.848], [18.51688, 73.850162], [18.518739, 73.852324], [18.520557, 73.854486], [18.522325, 73.856649], [18.524039, 73.858811], [18.526038, 73.861405], [18.528, 73.864], [18.528236, 73.863494], [18.528473, 73.862988], [18.528944, 73.861975], [18.529882, 73.85994], [18.531036, 73.857368], [18.532162, 73.854752], [18.533258, 73.85209], [18.534326, 73.849384], [18.535375, 73.846649], [18.536318, 73.843955], [18.537121, 73.841326], [18.537949, 73.838642], [18.538811, 73.835884], [18.539526, 73.833622], [18.540258, 73.831321], [18.541, 73.829], [18.541335, 73.828571], [18.542004, 73.827714], [18.54301, 73.826427], [18.544696, 73.824281], [18.546057, 73.822563], [18.547432, 73.820843], [18.549175, 73.818689], [18.550589, 73.816963], [18.552021, 73.815235], [18.553833, 73.813071], [18.555667, 73.810905], [18.557516, 73.808736], [18.559, 73.807], [18.559275, 73.806495], [18.55955, 73.805991], [18.560102, 73.804982], [18.56093, 73.803471], [18.562321, 73.800965], [18.563729, 73.798478], [18.564872, 73.796508], [18.566029, 73.794554], [18.567497, 73.792137], [18.568985, 73.789743], [18.570488, 73.787367], [18.572, 73.785], [18.570488, 73.787367], [18.568985, 73.789743], [18.567497, 73.792137], [18.566029, 73.794554], [18.564585, 73.796999], [18.563164, 73.79947], [18.561763, 73.801965], [18.560377, 73.804478], [18.559275, 73.806495], [18.559, 73.807], [18.558629, 73.807434], [18.558258, 73.807868], [18.557516, 73.808736], [18.556405, 73.810037], [18.554565, 73.812205], [18.553105, 73.813937], [18.551303, 73.8161], [18.549527, 73.818258], [18.547432, 73.820843], [18.545716, 73.822993], [18.54402, 73.82514], [18.542339, 73.827285], [18.541, 73.829], [18.540814, 73.829581], [18.540443, 73.830742], [18.53989, 73.832475], [18.538987, 73.835322], [18.538118, 73.838097], [18.537448, 73.84026], [18.536798, 73.842382], [18.536159, 73.844478], [18.535167, 73.847197], [18.534326, 73.849384], [18.533258, 73.85209], [18.532162, 73.854752], [18.531036, 73.857368], [18.529882, 73.85994], [18.528709, 73.862482], [18.528, 73.864], [18.527674, 73.863568], [18.527348, 73.863135], [18.526695, 73.86227], [18.525378, 73.860541], [18.524039, 73.858811], [18.522325, 73.856649], [18.520557, 73.854486], [18.518739, 73.852324], [18.51688, 73.850162]],
+              {
+  "stroke": true,
+  "color": "#E63946",
+  "weight": 3.5,
+  "opacity": 0.8,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#E63946",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1000,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+            ant_path_7a3b105f5251bbcd6d239e9dd170f939.bindTooltip(
+                `<div>
+                     <b>Vehicle:</b> BUS-R101-02<br><b>Route:</b> CBD Express (Central CBD - Tech Park)<br><b>Avg Speed:</b> 29.2 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2d5018e09ee827fd2855c6df59d70416 = L.circleMarker(
+                [18.51688, 73.850162],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+        var popup_3e039ead3bf0509e81a2e80e0f0807f0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_01873026a3801826a2bb9b29cce10d3b = $(`<div id="html_01873026a3801826a2bb9b29cce10d3b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 220px;">             <h4 style="margin: 0 0 5px 0; color: #1D3557;">Bus BUS-R101-02</h4>             <b>Route:</b> CBD Express (Central CBD - Tech Park)<br>             <b>Instant Speed:</b> <span style="font-weight: bold; color: green;">37.0 km/h</span> (SPI: 77.1%)<br>             <b>Congestion State:</b> Free Flow<br>             <b>Schedule Delay:</b> 138 sec<br>             <b>Passenger Load:</b> 31 pax<br>             <b>Segment:</b> Swargate Central Terminal &rarr; CBD Arterial Hub         </div>         </div>`)[0];
+                popup_3e039ead3bf0509e81a2e80e0f0807f0.setContent(html_01873026a3801826a2bb9b29cce10d3b);
+            
+        
+
+        circle_marker_2d5018e09ee827fd2855c6df59d70416.bindPopup(popup_3e039ead3bf0509e81a2e80e0f0807f0)
+        ;
+
+        
+    
+    
+            circle_marker_2d5018e09ee827fd2855c6df59d70416.bindTooltip(
+                `<div>
+                     BUS-R101-02 (37.0 km/h)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_787c8bfe50f49dcb3ecb765a9805ba3b = L.polyline.antPath(
+              [[18.572, 73.785], [18.570488, 73.787367], [18.568985, 73.789743], [18.567497, 73.792137], [18.566029, 73.794554], [18.564872, 73.796508], [18.563446, 73.798974], [18.562321, 73.800965], [18.56093, 73.803471], [18.559826, 73.805486], [18.559, 73.807], [18.558629, 73.807434], [18.558258, 73.807868], [18.557887, 73.808302], [18.557145, 73.80917], [18.555667, 73.810905], [18.553833, 73.813071], [18.552021, 73.815235], [18.550589, 73.816963], [18.548824, 73.81912], [18.547087, 73.821273], [18.545375, 73.823423], [18.543683, 73.825569], [18.542004, 73.827714], [18.541, 73.829], [18.540814, 73.829581], [18.540628, 73.830162], [18.540258, 73.831321], [18.539526, 73.833622], [18.538635, 73.836442], [18.537781, 73.839184], [18.536959, 73.841855], [18.536318, 73.843955], [18.535375, 73.846649], [18.534326, 73.849384], [18.533474, 73.851552], [18.532384, 73.854224], [18.531263, 73.856848], [18.529882, 73.85994], [18.528944, 73.861975], [18.528, 73.864], [18.527674, 73.863568], [18.527348, 73.863135], [18.526695, 73.86227], [18.525709, 73.860973], [18.524376, 73.859243], [18.522672, 73.857081], [18.521271, 73.855351], [18.519472, 73.853189], [18.517627, 73.851027], [18.515753, 73.848865], [18.515, 73.848], [18.51688, 73.850162], [18.519106, 73.852757], [18.520557, 73.854486], [18.521975, 73.856216], [18.5237, 73.858378], [18.525378, 73.860541], [18.527022, 73.862703], [18.528, 73.864], [18.528236, 73.863494], [18.528473, 73.862988], [18.528944, 73.861975], [18.529882, 73.85994], [18.531036, 73.857368], [18.532162, 73.854752], [18.533258, 73.85209], [18.534326, 73.849384], [18.535375, 73.846649], [18.536318, 73.843955], [18.537121, 73.841326], [18.537949, 73.838642], [18.538635, 73.836442], [18.539526, 73.833622], [18.540443, 73.830742], [18.541335, 73.828571], [18.541669, 73.828142], [18.542675, 73.826856], [18.544358, 73.824711], [18.546057, 73.822563], [18.547779, 73.820412], [18.549527, 73.818258], [18.550945, 73.816532], [18.552743, 73.81437], [18.554565, 73.812205], [18.556405, 73.810037], [18.558258, 73.807868], [18.558629, 73.807434], [18.559, 73.807], [18.559275, 73.806495], [18.55955, 73.805991], [18.559826, 73.805486], [18.560377, 73.804478], [18.561207, 73.802969], [18.562321, 73.800965], [18.563729, 73.798478], [18.56516, 73.796018], [18.566614, 73.793584], [18.56809, 73.791177], [18.569285, 73.789267], [18.57079, 73.786893]],
+              {
+  "stroke": true,
+  "color": "#E63946",
+  "weight": 3.5,
+  "opacity": 0.8,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#E63946",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1000,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+            ant_path_787c8bfe50f49dcb3ecb765a9805ba3b.bindTooltip(
+                `<div>
+                     <b>Vehicle:</b> BUS-R101-03<br><b>Route:</b> CBD Express (Central CBD - Tech Park)<br><b>Avg Speed:</b> 28.5 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b1a9f0e12031ad2f12d89249bb0eac3f = L.circleMarker(
+                [18.57079, 73.786893],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+        var popup_a7f0800aee59159f21fcdf69922ff930 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_803fb7c3bb765d302d46d8e5e74ecef3 = $(`<div id="html_803fb7c3bb765d302d46d8e5e74ecef3" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 220px;">             <h4 style="margin: 0 0 5px 0; color: #1D3557;">Bus BUS-R101-03</h4>             <b>Route:</b> CBD Express (Central CBD - Tech Park)<br>             <b>Instant Speed:</b> <span style="font-weight: bold; color: green;">32.4 km/h</span> (SPI: 67.5%)<br>             <b>Congestion State:</b> Mild Slowdown<br>             <b>Schedule Delay:</b> 173 sec<br>             <b>Passenger Load:</b> 35 pax<br>             <b>Segment:</b> Tech Park Phase 1 &rarr; Silicon High-Tech Zone         </div>         </div>`)[0];
+                popup_a7f0800aee59159f21fcdf69922ff930.setContent(html_803fb7c3bb765d302d46d8e5e74ecef3);
+            
+        
+
+        circle_marker_b1a9f0e12031ad2f12d89249bb0eac3f.bindPopup(popup_a7f0800aee59159f21fcdf69922ff930)
+        ;
+
+        
+    
+    
+            circle_marker_b1a9f0e12031ad2f12d89249bb0eac3f.bindTooltip(
+                `<div>
+                     BUS-R101-03 (32.4 km/h)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_2da2cf8b3f033c624a4695d53496540a = L.polyline.antPath(
+              [[18.51613, 73.849297], [18.515, 73.848], [18.51688, 73.850162], [18.518739, 73.852324], [18.520915, 73.854919], [18.522672, 73.857081], [18.524039, 73.858811], [18.525709, 73.860973], [18.527348, 73.863135], [18.528, 73.864], [18.528236, 73.863494], [18.528473, 73.862988], [18.528944, 73.861975], [18.529649, 73.86045], [18.530807, 73.857885], [18.531939, 73.855279], [18.533041, 73.852626], [18.534115, 73.849929], [18.535167, 73.847197], [18.536159, 73.844478], [18.536959, 73.841855], [18.537781, 73.839184], [18.538635, 73.836442], [18.539526, 73.833622], [18.540443, 73.830742], [18.541335, 73.828571], [18.542004, 73.827714], [18.54301, 73.826427], [18.544696, 73.824281], [18.546057, 73.822563], [18.547779, 73.820412], [18.549527, 73.818258], [18.551303, 73.8161], [18.553105, 73.813937], [18.554565, 73.812205], [18.556405, 73.810037], [18.558258, 73.807868], [18.559, 73.807], [18.559275, 73.806495], [18.559826, 73.805486], [18.560377, 73.804478], [18.561485, 73.802467], [18.562882, 73.799967], [18.564299, 73.797491], [18.565738, 73.795041], [18.567202, 73.792618], [18.568686, 73.79022], [18.570187, 73.787841], [18.571697, 73.785473], [18.572, 73.785], [18.570488, 73.787367], [18.568985, 73.789743], [18.567793, 73.791656], [18.566321, 73.794069], [18.564872, 73.796508], [18.563446, 73.798974], [18.562321, 73.800965], [18.56093, 73.803471], [18.559826, 73.805486], [18.559275, 73.806495], [18.559, 73.807], [18.558629, 73.807434], [18.558258, 73.807868], [18.557887, 73.808302], [18.556775, 73.809604], [18.555299, 73.811338], [18.553469, 73.813504], [18.551661, 73.815667], [18.54988, 73.817827], [18.548126, 73.819982], [18.546399, 73.822133], [18.544696, 73.824281], [18.543346, 73.825998], [18.542004, 73.827714], [18.541, 73.829], [18.540814, 73.829581], [18.540443, 73.830742], [18.53989, 73.832475], [18.538987, 73.835322], [18.538118, 73.838097], [18.537284, 73.840794], [18.536477, 73.843432], [18.535792, 73.84555], [18.534748, 73.848293], [18.533688, 73.851012], [18.532604, 73.853693], [18.531715, 73.855804], [18.530577, 73.858401], [18.529414, 73.86096], [18.528236, 73.863494], [18.528, 73.864], [18.527674, 73.863568], [18.527348, 73.863135], [18.526695, 73.86227], [18.525709, 73.860973], [18.524039, 73.858811], [18.522325, 73.856649], [18.520557, 73.854486], [18.51837, 73.851892], [18.516505, 73.84973]],
+              {
+  "stroke": true,
+  "color": "#E63946",
+  "weight": 3.5,
+  "opacity": 0.8,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#E63946",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1000,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+            ant_path_2da2cf8b3f033c624a4695d53496540a.bindTooltip(
+                `<div>
+                     <b>Vehicle:</b> BUS-R101-04<br><b>Route:</b> CBD Express (Central CBD - Tech Park)<br><b>Avg Speed:</b> 29.0 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b73ee5467c4501ab56a2c6b6128ee3c1 = L.circleMarker(
+                [18.516505, 73.84973],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+        var popup_03c487481fc6ba23f6592c285a0a3901 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d96cf325b44e9f3bea5a5daded372901 = $(`<div id="html_d96cf325b44e9f3bea5a5daded372901" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 220px;">             <h4 style="margin: 0 0 5px 0; color: #1D3557;">Bus BUS-R101-04</h4>             <b>Route:</b> CBD Express (Central CBD - Tech Park)<br>             <b>Instant Speed:</b> <span style="font-weight: bold; color: green;">34.3 km/h</span> (SPI: 71.4%)<br>             <b>Congestion State:</b> Mild Slowdown<br>             <b>Schedule Delay:</b> 145 sec<br>             <b>Passenger Load:</b> 44 pax<br>             <b>Segment:</b> Swargate Central Terminal &rarr; CBD Arterial Hub         </div>         </div>`)[0];
+                popup_03c487481fc6ba23f6592c285a0a3901.setContent(html_d96cf325b44e9f3bea5a5daded372901);
+            
+        
+
+        circle_marker_b73ee5467c4501ab56a2c6b6128ee3c1.bindPopup(popup_03c487481fc6ba23f6592c285a0a3901)
+        ;
+
+        
+    
+    
+            circle_marker_b73ee5467c4501ab56a2c6b6128ee3c1.bindTooltip(
+                `<div>
+                     BUS-R101-04 (34.3 km/h)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_0c543ff651d86d87a88a22b56507724c = L.polyline.antPath(
+              [[18.567793, 73.791656], [18.566321, 73.794069], [18.564872, 73.796508], [18.563446, 73.798974], [18.562042, 73.801465], [18.560654, 73.803974], [18.559275, 73.806495], [18.559, 73.807], [18.558629, 73.807434], [18.558258, 73.807868], [18.557516, 73.808736], [18.556036, 73.810471], [18.554199, 73.812638], [18.552381, 73.814803], [18.550945, 73.816532], [18.549175, 73.818689], [18.547432, 73.820843], [18.545716, 73.822993], [18.544358, 73.824711], [18.542675, 73.826856], [18.541, 73.829], [18.540814, 73.829581], [18.540443, 73.830742], [18.53989, 73.832475], [18.538987, 73.835322], [18.538118, 73.838097], [18.537284, 73.840794], [18.536637, 73.842908], [18.535792, 73.84555], [18.534748, 73.848293], [18.533688, 73.851012], [18.532823, 73.853161], [18.531715, 73.855804], [18.530807, 73.857885], [18.529649, 73.86045], [18.528709, 73.862482], [18.527674, 73.863568], [18.527348, 73.863135], [18.526695, 73.86227], [18.525378, 73.860541], [18.5237, 73.858378], [18.521975, 73.856216], [18.520197, 73.854054], [18.51837, 73.851892], [18.516505, 73.84973], [18.515, 73.848], [18.51688, 73.850162], [18.518739, 73.852324], [18.520557, 73.854486], [18.521975, 73.856216], [18.5237, 73.858378], [18.525378, 73.860541], [18.527022, 73.862703], [18.528, 73.864], [18.528236, 73.863494], [18.528473, 73.862988], [18.528944, 73.861975], [18.529882, 73.85994], [18.531036, 73.857368], [18.532162, 73.854752], [18.533258, 73.85209], [18.534326, 73.849384], [18.535375, 73.846649], [18.536318, 73.843955], [18.537121, 73.841326], [18.537781, 73.839184], [18.538635, 73.836442], [18.539526, 73.833622], [18.540258, 73.831321], [18.541335, 73.828571], [18.541669, 73.828142], [18.542339, 73.827285], [18.543683, 73.825569], [18.545375, 73.823423], [18.546743, 73.821703], [18.548475, 73.819551], [18.550234, 73.817395], [18.552021, 73.815235], [18.553833, 73.813071], [18.555667, 73.810905], [18.557516, 73.808736], [18.558629, 73.807434], [18.559, 73.807], [18.559275, 73.806495], [18.55955, 73.805991], [18.560102, 73.804982], [18.56093, 73.803471], [18.562321, 73.800965], [18.563729, 73.798478], [18.56516, 73.796018], [18.566321, 73.794069], [18.567793, 73.791656], [18.569285, 73.789267], [18.57079, 73.786893], [18.572, 73.785], [18.570187, 73.787841], [18.568686, 73.79022], [18.567497, 73.792137], [18.566029, 73.794554], [18.564872, 73.796508]],
+              {
+  "stroke": true,
+  "color": "#E63946",
+  "weight": 3.5,
+  "opacity": 0.8,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#E63946",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1000,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+            ant_path_0c543ff651d86d87a88a22b56507724c.bindTooltip(
+                `<div>
+                     <b>Vehicle:</b> BUS-R101-05<br><b>Route:</b> CBD Express (Central CBD - Tech Park)<br><b>Avg Speed:</b> 29.4 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ee7465bbe34f1456bab44cd302c78337 = L.circleMarker(
+                [18.564872, 73.796508],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+        var popup_4c4ab56af63af0f99c246eb7961af9ef = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3a5e1efc9d251909a0557e488245600d = $(`<div id="html_3a5e1efc9d251909a0557e488245600d" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 220px;">             <h4 style="margin: 0 0 5px 0; color: #1D3557;">Bus BUS-R101-05</h4>             <b>Route:</b> CBD Express (Central CBD - Tech Park)<br>             <b>Instant Speed:</b> <span style="font-weight: bold; color: green;">36.5 km/h</span> (SPI: 75.9%)<br>             <b>Congestion State:</b> Free Flow<br>             <b>Schedule Delay:</b> 131 sec<br>             <b>Passenger Load:</b> 36 pax<br>             <b>Segment:</b> Tech Park Phase 1 &rarr; Silicon High-Tech Zone         </div>         </div>`)[0];
+                popup_4c4ab56af63af0f99c246eb7961af9ef.setContent(html_3a5e1efc9d251909a0557e488245600d);
+            
+        
+
+        circle_marker_ee7465bbe34f1456bab44cd302c78337.bindPopup(popup_4c4ab56af63af0f99c246eb7961af9ef)
+        ;
+
+        
+    
+    
+            circle_marker_ee7465bbe34f1456bab44cd302c78337.bindTooltip(
+                `<div>
+                     BUS-R101-05 (36.5 km/h)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_ff6d70b805094849bd1ca0f110a9b067 = L.polyline.antPath(
+              [[18.536798, 73.842382], [18.537614, 73.839724], [18.538462, 73.836997], [18.539345, 73.834191], [18.540258, 73.831321], [18.541, 73.829], [18.541335, 73.828571], [18.541669, 73.828142], [18.542339, 73.827285], [18.543683, 73.825569], [18.545375, 73.823423], [18.547087, 73.821273], [18.548824, 73.81912], [18.550234, 73.817395], [18.552021, 73.815235], [18.553833, 73.813071], [18.555667, 73.810905], [18.557516, 73.808736], [18.559, 73.807], [18.559275, 73.806495], [18.55955, 73.805991], [18.559826, 73.805486], [18.560654, 73.803974], [18.561763, 73.801965], [18.563164, 73.79947], [18.564585, 73.796999], [18.566029, 73.794554], [18.567202, 73.792618], [18.568388, 73.790698], [18.569886, 73.788316], [18.571093, 73.786419], [18.572, 73.785], [18.570488, 73.787367], [18.569285, 73.789267], [18.567793, 73.791656], [18.566321, 73.794069], [18.564872, 73.796508], [18.563446, 73.798974], [18.562042, 73.801465], [18.560654, 73.803974], [18.559275, 73.806495], [18.559, 73.807], [18.558629, 73.807434], [18.558258, 73.807868], [18.557887, 73.808302], [18.557145, 73.80917], [18.555667, 73.810905], [18.553833, 73.813071], [18.552021, 73.815235], [18.550234, 73.817395], [18.548824, 73.81912], [18.547432, 73.820843], [18.546057, 73.822563], [18.544358, 73.824711], [18.54301, 73.826427], [18.541335, 73.828571], [18.541, 73.829], [18.540814, 73.829581], [18.540443, 73.830742], [18.539707, 73.83305], [18.538987, 73.835322], [18.538118, 73.838097], [18.537284, 73.840794], [18.536477, 73.843432], [18.535584, 73.846099], [18.534537, 73.848839], [18.533688, 73.851012], [18.532823, 73.853161], [18.531715, 73.855804], [18.530807, 73.857885], [18.529649, 73.86045], [18.528473, 73.862988], [18.528, 73.864], [18.527674, 73.863568], [18.527348, 73.863135], [18.526695, 73.86227], [18.525378, 73.860541], [18.5237, 73.858378], [18.522325, 73.856649], [18.520557, 73.854486], [18.519106, 73.852757], [18.517254, 73.850595], [18.515753, 73.848865], [18.515, 73.848], [18.51688, 73.850162], [18.518739, 73.852324], [18.520557, 73.854486], [18.522325, 73.856649], [18.524039, 73.858811], [18.525709, 73.860973], [18.527348, 73.863135], [18.528236, 73.863494], [18.528473, 73.862988], [18.528944, 73.861975], [18.529882, 73.85994], [18.531036, 73.857368], [18.531939, 73.855279], [18.533041, 73.852626], [18.533902, 73.850471], [18.534957, 73.847746]],
+              {
+  "stroke": true,
+  "color": "#E63946",
+  "weight": 3.5,
+  "opacity": 0.8,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#E63946",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1000,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+            ant_path_ff6d70b805094849bd1ca0f110a9b067.bindTooltip(
+                `<div>
+                     <b>Vehicle:</b> BUS-R101-06<br><b>Route:</b> CBD Express (Central CBD - Tech Park)<br><b>Avg Speed:</b> 28.4 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fde1f114a8105bb8f9b2f6bbb0f334d5 = L.circleMarker(
+                [18.534957, 73.847746],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+        var popup_228b291a703ba904a2745a8a6231b81d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c0086119d9a90f89596f42a882cd542d = $(`<div id="html_c0086119d9a90f89596f42a882cd542d" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 220px;">             <h4 style="margin: 0 0 5px 0; color: #1D3557;">Bus BUS-R101-06</h4>             <b>Route:</b> CBD Express (Central CBD - Tech Park)<br>             <b>Instant Speed:</b> <span style="font-weight: bold; color: green;">32.4 km/h</span> (SPI: 67.6%)<br>             <b>Congestion State:</b> Mild Slowdown<br>             <b>Schedule Delay:</b> 180 sec<br>             <b>Passenger Load:</b> 40 pax<br>             <b>Segment:</b> CBD Arterial Hub &rarr; Civic Plaza         </div>         </div>`)[0];
+                popup_228b291a703ba904a2745a8a6231b81d.setContent(html_c0086119d9a90f89596f42a882cd542d);
+            
+        
+
+        circle_marker_fde1f114a8105bb8f9b2f6bbb0f334d5.bindPopup(popup_228b291a703ba904a2745a8a6231b81d)
+        ;
+
+        
+    
+    
+            circle_marker_fde1f114a8105bb8f9b2f6bbb0f334d5.bindTooltip(
+                `<div>
+                     BUS-R101-06 (32.4 km/h)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_e8d5c8b225f536be443d681629793d64 = L.polyline.antPath(
+              [[18.515, 73.848], [18.51688, 73.850162], [18.51837, 73.851892], [18.520197, 73.854054], [18.521975, 73.856216], [18.523359, 73.857946], [18.525045, 73.860108], [18.526695, 73.86227], [18.527674, 73.863568], [18.528, 73.864], [18.528236, 73.863494], [18.528473, 73.862988], [18.528944, 73.861975], [18.529882, 73.85994], [18.531036, 73.857368], [18.532162, 73.854752], [18.533258, 73.85209], [18.534115, 73.849929], [18.535167, 73.847197], [18.536159, 73.844478], [18.536798, 73.842382], [18.537614, 73.839724], [18.538462, 73.836997], [18.539166, 73.834758], [18.540074, 73.831899], [18.540814, 73.829581], [18.541, 73.829], [18.541335, 73.828571], [18.541669, 73.828142], [18.542339, 73.827285], [18.543683, 73.825569], [18.545375, 73.823423], [18.547087, 73.821273], [18.548824, 73.81912], [18.550589, 73.816963], [18.552381, 73.814803], [18.554199, 73.812638], [18.556036, 73.810471], [18.557887, 73.808302], [18.559, 73.807], [18.559275, 73.806495], [18.55955, 73.805991], [18.560102, 73.804982], [18.56093, 73.803471], [18.562321, 73.800965], [18.563729, 73.798478], [18.56516, 73.796018], [18.566614, 73.793584], [18.56809, 73.791177], [18.569585, 73.788791], [18.57079, 73.786893], [18.572, 73.785], [18.570488, 73.787367], [18.568985, 73.789743], [18.567497, 73.792137], [18.566029, 73.794554], [18.564585, 73.796999], [18.563164, 73.79947], [18.562042, 73.801465], [18.560654, 73.803974], [18.55955, 73.805991], [18.559, 73.807], [18.558629, 73.807434], [18.558258, 73.807868], [18.557887, 73.808302], [18.556775, 73.809604], [18.554931, 73.811772], [18.553105, 73.813937], [18.551303, 73.8161], [18.549527, 73.818258], [18.548126, 73.819982], [18.546399, 73.822133], [18.544696, 73.824281], [18.542675, 73.826856], [18.541, 73.829], [18.540814, 73.829581], [18.540443, 73.830742], [18.53989, 73.832475], [18.538987, 73.835322], [18.538118, 73.838097], [18.537448, 73.84026], [18.536637, 73.842908], [18.535792, 73.84555], [18.534957, 73.847746], [18.533902, 73.850471], [18.532823, 73.853161]],
+              {
+  "stroke": true,
+  "color": "#E63946",
+  "weight": 3.5,
+  "opacity": 0.8,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#E63946",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1000,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+            ant_path_e8d5c8b225f536be443d681629793d64.bindTooltip(
+                `<div>
+                     <b>Vehicle:</b> BUS-R101-07<br><b>Route:</b> CBD Express (Central CBD - Tech Park)<br><b>Avg Speed:</b> 28.9 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_251335af6819ef68e82568f0227bc20e = L.circleMarker(
+                [18.532823, 73.853161],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+        var popup_855a5991c56cdf53de5540285fa09210 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_69951898dadb5a48d0933d52570f6270 = $(`<div id="html_69951898dadb5a48d0933d52570f6270" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 220px;">             <h4 style="margin: 0 0 5px 0; color: #1D3557;">Bus BUS-R101-07</h4>             <b>Route:</b> CBD Express (Central CBD - Tech Park)<br>             <b>Instant Speed:</b> <span style="font-weight: bold; color: green;">36.0 km/h</span> (SPI: 75.1%)<br>             <b>Congestion State:</b> Free Flow<br>             <b>Schedule Delay:</b> 136 sec<br>             <b>Passenger Load:</b> 28 pax<br>             <b>Segment:</b> CBD Arterial Hub &rarr; Civic Plaza         </div>         </div>`)[0];
+                popup_855a5991c56cdf53de5540285fa09210.setContent(html_69951898dadb5a48d0933d52570f6270);
+            
+        
+
+        circle_marker_251335af6819ef68e82568f0227bc20e.bindPopup(popup_855a5991c56cdf53de5540285fa09210)
+        ;
+
+        
+    
+    
+            circle_marker_251335af6819ef68e82568f0227bc20e.bindTooltip(
+                `<div>
+                     BUS-R101-07 (36.0 km/h)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_d5bca72ba485b8c2af9b357533105f40 = L.polyline.antPath(
+              [[18.515, 73.848], [18.51688, 73.850162], [18.518739, 73.852324], [18.520557, 73.854486], [18.522325, 73.856649], [18.524039, 73.858811], [18.525709, 73.860973], [18.527348, 73.863135], [18.527674, 73.863568], [18.528, 73.864], [18.528236, 73.863494], [18.528473, 73.862988], [18.528944, 73.861975], [18.529882, 73.85994], [18.531036, 73.857368], [18.531939, 73.855279], [18.533041, 73.852626], [18.534115, 73.849929], [18.534957, 73.847746], [18.536, 73.845], [18.536798, 73.842382], [18.537614, 73.839724], [18.538462, 73.836997], [18.539345, 73.834191], [18.540258, 73.831321], [18.541, 73.829], [18.541335, 73.828571], [18.542004, 73.827714], [18.54301, 73.826427], [18.544696, 73.824281], [18.546399, 73.822133], [18.547779, 73.820412], [18.549175, 73.818689], [18.550589, 73.816963], [18.552381, 73.814803], [18.554199, 73.812638], [18.556036, 73.810471], [18.557887, 73.808302], [18.558629, 73.807434], [18.559, 73.807], [18.559275, 73.806495], [18.55955, 73.805991], [18.560102, 73.804982], [18.56093, 73.803471], [18.562321, 73.800965], [18.563729, 73.798478], [18.56516, 73.796018], [18.566614, 73.793584], [18.56809, 73.791177], [18.569585, 73.788791], [18.571093, 73.786419]],
+              {
+  "stroke": true,
+  "color": "#E63946",
+  "weight": 3.5,
+  "opacity": 0.8,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#E63946",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1000,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+            ant_path_d5bca72ba485b8c2af9b357533105f40.bindTooltip(
+                `<div>
+                     <b>Vehicle:</b> BUS-R101-08<br><b>Route:</b> CBD Express (Central CBD - Tech Park)<br><b>Avg Speed:</b> 28.0 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_19f466b64c80bb9994c9e51a8cfc4286 = L.circleMarker(
+                [18.571093, 73.786419],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+        var popup_424e2ec59e36e3158c0f7039d81a88c7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e204659efa364fcbed2dbc8f7d274c8e = $(`<div id="html_e204659efa364fcbed2dbc8f7d274c8e" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 220px;">             <h4 style="margin: 0 0 5px 0; color: #1D3557;">Bus BUS-R101-08</h4>             <b>Route:</b> CBD Express (Central CBD - Tech Park)<br>             <b>Instant Speed:</b> <span style="font-weight: bold; color: green;">37.1 km/h</span> (SPI: 77.4%)<br>             <b>Congestion State:</b> Free Flow<br>             <b>Schedule Delay:</b> 119 sec<br>             <b>Passenger Load:</b> 42 pax<br>             <b>Segment:</b> Tech Park Phase 1 &rarr; Silicon High-Tech Zone         </div>         </div>`)[0];
+                popup_424e2ec59e36e3158c0f7039d81a88c7.setContent(html_e204659efa364fcbed2dbc8f7d274c8e);
+            
+        
+
+        circle_marker_19f466b64c80bb9994c9e51a8cfc4286.bindPopup(popup_424e2ec59e36e3158c0f7039d81a88c7)
+        ;
+
+        
+    
+    
+            circle_marker_19f466b64c80bb9994c9e51a8cfc4286.bindTooltip(
+                `<div>
+                     BUS-R101-08 (37.1 km/h)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_6b3a918b507d5c7058eb3898a9cb8811 = L.polyline.antPath(
+              [[18.530275, 73.875339], [18.53105, 73.876176], [18.532604, 73.877843], [18.534166, 73.879494], [18.536134, 73.881524], [18.538121, 73.883511], [18.539725, 73.88507], [18.54134, 73.886604], [18.543371, 73.888497], [18.545401, 73.890366], [18.547007, 73.89183], [18.548618, 73.893294], [18.550642, 73.895121], [18.552683, 73.896947], [18.554745, 73.898769], [18.556831, 73.900588], [18.558518, 73.90204], [18.560646, 73.903853], [18.562363, 73.905301], [18.564524, 73.90711], [18.566695, 73.908916], [18.568393, 73.910355], [18.570364, 73.912138], [18.571965, 73.913593], [18.574011, 73.915463], [18.575689, 73.917006], [18.57783, 73.918986], [18.579565, 73.920596], [18.58, 73.921], [18.57783, 73.918986], [18.576114, 73.917398], [18.574011, 73.915463], [18.57237, 73.913961], [18.570364, 73.912138], [18.568785, 73.91071], [18.56713, 73.909278], [18.564957, 73.907471], [18.563225, 73.906025], [18.561503, 73.904577], [18.559366, 73.902766], [18.557673, 73.901314], [18.555577, 73.899497], [18.553505, 73.897676], [18.551456, 73.895852], [18.54983, 73.89439], [18.547812, 73.892562], [18.545803, 73.890732], [18.544185, 73.889249], [18.542557, 73.887742], [18.540936, 73.886222], [18.538922, 73.884294], [18.536927, 73.882324], [18.535345, 73.880717], [18.533775, 73.879083], [18.531827, 73.877011], [18.529887, 73.874919], [18.5295, 73.8745], [18.529236, 73.874015], [18.528708, 73.873045], [18.528179, 73.872074], [18.52712, 73.870128], [18.525789, 73.867686], [18.524448, 73.865228], [18.523366, 73.863247], [18.522275, 73.861252], [18.520899, 73.858739], [18.519509, 73.856205], [18.518108, 73.853653], [18.51698, 73.851602], [18.515566, 73.84903], [18.513533, 73.847385], [18.511078, 73.846359], [18.509093, 73.845538], [18.506576, 73.844513], [18.504012, 73.843487], [18.501401, 73.842462], [18.49875, 73.841436], [18.498216, 73.841231], [18.497146, 73.840821], [18.496074, 73.84041], [18.495, 73.84], [18.497146, 73.840821], [18.498216, 73.841231], [18.49875, 73.841436], [18.499814, 73.841846], [18.501401, 73.842462], [18.503493, 73.843282], [18.506067, 73.844308], [18.508092, 73.845128], [18.510584, 73.846154], [18.512553, 73.846974], [18.514511, 73.847795], [18.516132, 73.850059], [18.517263, 73.852115], [18.518389, 73.854165], [18.519509, 73.856205], [18.520899, 73.858739], [18.522001, 73.860751], [18.523094, 73.86275], [18.524179, 73.864734]],
+              {
+  "stroke": true,
+  "color": "#1D3557",
+  "weight": 3.5,
+  "opacity": 0.8,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#1D3557",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1000,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+            ant_path_6b3a918b507d5c7058eb3898a9cb8811.bindTooltip(
+                `<div>
+                     <b>Vehicle:</b> BUS-R102-01<br><b>Route:</b> North-South Transit Spine (Rail Terminal - Airport)<br><b>Avg Speed:</b> 30.1 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a2bc3498a18830051858318afbffde8f = L.circleMarker(
+                [18.524179, 73.864734],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+        var popup_e9f2bd8f5e899206cc8f20b88efe5c00 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_57bab30cfd82dc9578fc69e9ec4b18e9 = $(`<div id="html_57bab30cfd82dc9578fc69e9ec4b18e9" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 220px;">             <h4 style="margin: 0 0 5px 0; color: #1D3557;">Bus BUS-R102-01</h4>             <b>Route:</b> North-South Transit Spine (Rail Terminal - Airport)<br>             <b>Instant Speed:</b> <span style="font-weight: bold; color: green;">34.2 km/h</span> (SPI: 76.0%)<br>             <b>Congestion State:</b> Free Flow<br>             <b>Schedule Delay:</b> 121 sec<br>             <b>Passenger Load:</b> 32 pax<br>             <b>Segment:</b> Swargate Central Terminal &rarr; Metropolitan Rail Junction         </div>         </div>`)[0];
+                popup_e9f2bd8f5e899206cc8f20b88efe5c00.setContent(html_57bab30cfd82dc9578fc69e9ec4b18e9);
+            
+        
+
+        circle_marker_a2bc3498a18830051858318afbffde8f.bindPopup(popup_e9f2bd8f5e899206cc8f20b88efe5c00)
+        ;
+
+        
+    
+    
+            circle_marker_a2bc3498a18830051858318afbffde8f.bindTooltip(
+                `<div>
+                     BUS-R102-01 (34.2 km/h)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_ab03f932d7291f5735094996c8e67275 = L.polyline.antPath(
+              [[18.52765, 73.871102], [18.526323, 73.868665], [18.525254, 73.866705], [18.524179, 73.864734], [18.522822, 73.862251], [18.521726, 73.86025], [18.520344, 73.857728], [18.51923, 73.855696], [18.517826, 73.853141], [18.516415, 73.850574], [18.515283, 73.848515], [18.513044, 73.847179], [18.511078, 73.846359], [18.509093, 73.845538], [18.507083, 73.844718], [18.505043, 73.843897], [18.502973, 73.843077], [18.500345, 73.842051], [18.49875, 73.841436], [18.497682, 73.841026], [18.49661, 73.840615], [18.495, 73.84], [18.497146, 73.840821], [18.498216, 73.841231], [18.49875, 73.841436], [18.499814, 73.841846], [18.501401, 73.842462], [18.503493, 73.843282], [18.505556, 73.844103], [18.508092, 73.845128], [18.510584, 73.846154], [18.513044, 73.847179], [18.515, 73.848], [18.516415, 73.850574], [18.517826, 73.853141], [18.51895, 73.855186], [18.520066, 73.857221], [18.521175, 73.859244], [18.522549, 73.861752], [18.523637, 73.863744], [18.524717, 73.865721], [18.526056, 73.868176], [18.527385, 73.870615], [18.528444, 73.872559], [18.529236, 73.874015], [18.529887, 73.874919], [18.530275, 73.875339], [18.53105, 73.876176], [18.532604, 73.877843], [18.534166, 73.879494], [18.536134, 73.881524], [18.538121, 73.883511], [18.539725, 73.88507], [18.54134, 73.886604], [18.543371, 73.888497], [18.545401, 73.890366], [18.547409, 73.892196], [18.549021, 73.893659], [18.550642, 73.895121], [18.552683, 73.896947], [18.554331, 73.898405], [18.556412, 73.900224], [18.558095, 73.901677], [18.560218, 73.903491], [18.561932, 73.904939], [18.56409, 73.906748], [18.565825, 73.908194], [18.568, 73.91], [18.569968, 73.911779], [18.571965, 73.913593], [18.573597, 73.915084], [18.575689, 73.917006], [18.577399, 73.918587], [18.579565, 73.920596], [18.58, 73.921], [18.57783, 73.918986], [18.576114, 73.917398], [18.574427, 73.915845], [18.57237, 73.913961], [18.570762, 73.912499], [18.569179, 73.911065], [18.567565, 73.909639], [18.565825, 73.908194], [18.56409, 73.906748], [18.562363, 73.905301], [18.560218, 73.903491], [18.558095, 73.901677], [18.556412, 73.900224], [18.554745, 73.898769], [18.553093, 73.897311], [18.551048, 73.895487], [18.549425, 73.894025], [18.547812, 73.892562], [18.545803, 73.890732], [18.543778, 73.888873], [18.542151, 73.887364], [18.540532, 73.88584], [18.538922, 73.884294], [18.536927, 73.882324], [18.535345, 73.880717]],
+              {
+  "stroke": true,
+  "color": "#1D3557",
+  "weight": 3.5,
+  "opacity": 0.8,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#1D3557",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1000,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+            ant_path_ab03f932d7291f5735094996c8e67275.bindTooltip(
+                `<div>
+                     <b>Vehicle:</b> BUS-R102-02<br><b>Route:</b> North-South Transit Spine (Rail Terminal - Airport)<br><b>Avg Speed:</b> 30.0 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_81e4333750fa5517219d84fdeccdc434 = L.circleMarker(
+                [18.535345, 73.880717],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+        var popup_4a6a63e4cd7213e171dd2debb5c38cfd = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e3e950d583c5ab7c95c2d622573252bb = $(`<div id="html_e3e950d583c5ab7c95c2d622573252bb" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 220px;">             <h4 style="margin: 0 0 5px 0; color: #1D3557;">Bus BUS-R102-02</h4>             <b>Route:</b> North-South Transit Spine (Rail Terminal - Airport)<br>             <b>Instant Speed:</b> <span style="font-weight: bold; color: green;">31.9 km/h</span> (SPI: 70.9%)<br>             <b>Congestion State:</b> Mild Slowdown<br>             <b>Schedule Delay:</b> 153 sec<br>             <b>Passenger Load:</b> 35 pax<br>             <b>Segment:</b> Metropolitan Rail Junction &rarr; Koregaon East Hub         </div>         </div>`)[0];
+                popup_4a6a63e4cd7213e171dd2debb5c38cfd.setContent(html_e3e950d583c5ab7c95c2d622573252bb);
+            
+        
+
+        circle_marker_81e4333750fa5517219d84fdeccdc434.bindPopup(popup_4a6a63e4cd7213e171dd2debb5c38cfd)
+        ;
+
+        
+    
+    
+            circle_marker_81e4333750fa5517219d84fdeccdc434.bindTooltip(
+                `<div>
+                     BUS-R102-02 (31.9 km/h)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_633785004ecb22f6cd77787f7653dd30 = L.polyline.antPath(
+              [[18.555161, 73.899133], [18.557251, 73.900951], [18.558941, 73.902403], [18.561074, 73.904215], [18.562794, 73.905663], [18.564957, 73.907471], [18.56713, 73.909278], [18.568785, 73.91071], [18.570364, 73.912138], [18.571965, 73.913593], [18.574011, 73.915463], [18.575689, 73.917006], [18.57783, 73.918986], [18.579565, 73.920596], [18.58, 73.921], [18.57783, 73.918986], [18.576114, 73.917398], [18.574427, 73.915845], [18.57237, 73.913961], [18.570364, 73.912138], [18.568393, 73.910355], [18.566695, 73.908916], [18.564524, 73.90711], [18.562363, 73.905301], [18.560646, 73.903853], [18.558518, 73.90204], [18.556412, 73.900224], [18.554331, 73.898405], [18.552683, 73.896947], [18.550642, 73.895121], [18.549021, 73.893659], [18.547007, 73.89183], [18.545401, 73.890366], [18.543778, 73.888873], [18.541746, 73.886984], [18.539725, 73.88507], [18.537722, 73.883117], [18.536134, 73.881524], [18.534559, 73.879903], [18.532994, 73.878258], [18.531438, 73.876594], [18.529887, 73.874919], [18.5295, 73.8745], [18.529236, 73.874015], [18.528708, 73.873045], [18.527915, 73.871588], [18.526855, 73.869641], [18.525522, 73.867196], [18.524179, 73.864734], [18.522822, 73.862251], [18.521726, 73.86025], [18.520344, 73.857728], [18.51895, 73.855186], [18.517826, 73.853141], [18.516415, 73.850574], [18.515, 73.848], [18.513044, 73.847179], [18.511078, 73.846359], [18.508593, 73.845333], [18.506576, 73.844513], [18.504529, 73.843692], [18.501926, 73.842667], [18.499814, 73.841846], [18.49875, 73.841436], [18.497682, 73.841026], [18.49661, 73.840615], [18.495, 73.84], [18.497146, 73.840821], [18.498216, 73.841231], [18.49875, 73.841436], [18.499814, 73.841846], [18.500873, 73.842256], [18.502973, 73.843077], [18.505043, 73.843897], [18.507083, 73.844718], [18.509591, 73.845744], [18.511571, 73.846564], [18.513533, 73.847385], [18.515566, 73.84903], [18.516698, 73.851088], [18.518108, 73.853653], [18.519509, 73.856205], [18.520899, 73.858739], [18.522001, 73.860751], [18.523094, 73.86275], [18.524179, 73.864734], [18.525254, 73.866705], [18.526589, 73.869153], [18.527915, 73.871588], [18.528972, 73.87353], [18.5295, 73.8745], [18.529887, 73.874919], [18.530275, 73.875339], [18.53105, 73.876176], [18.532604, 73.877843], [18.534166, 73.879494], [18.535739, 73.881121], [18.537722, 73.883117], [18.539725, 73.88507], [18.54134, 73.886604]],
+              {
+  "stroke": true,
+  "color": "#1D3557",
+  "weight": 3.5,
+  "opacity": 0.8,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#1D3557",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1000,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+            ant_path_633785004ecb22f6cd77787f7653dd30.bindTooltip(
+                `<div>
+                     <b>Vehicle:</b> BUS-R102-03<br><b>Route:</b> North-South Transit Spine (Rail Terminal - Airport)<br><b>Avg Speed:</b> 29.0 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dbd501e3bfa9cbe67f82e982c644b327 = L.circleMarker(
+                [18.54134, 73.886604],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+        var popup_01029753ab0ff07db2df31d0dc1d58fc = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0e8b33ce27dfb492d24aafd6bc98f5d9 = $(`<div id="html_0e8b33ce27dfb492d24aafd6bc98f5d9" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 220px;">             <h4 style="margin: 0 0 5px 0; color: #1D3557;">Bus BUS-R102-03</h4>             <b>Route:</b> North-South Transit Spine (Rail Terminal - Airport)<br>             <b>Instant Speed:</b> <span style="font-weight: bold; color: green;">33.5 km/h</span> (SPI: 74.6%)<br>             <b>Congestion State:</b> Mild Slowdown<br>             <b>Schedule Delay:</b> 133 sec<br>             <b>Passenger Load:</b> 39 pax<br>             <b>Segment:</b> Metropolitan Rail Junction &rarr; Koregaon East Hub         </div>         </div>`)[0];
+                popup_01029753ab0ff07db2df31d0dc1d58fc.setContent(html_0e8b33ce27dfb492d24aafd6bc98f5d9);
+            
+        
+
+        circle_marker_dbd501e3bfa9cbe67f82e982c644b327.bindPopup(popup_01029753ab0ff07db2df31d0dc1d58fc)
+        ;
+
+        
+    
+    
+            circle_marker_dbd501e3bfa9cbe67f82e982c644b327.bindTooltip(
+                `<div>
+                     BUS-R102-03 (33.5 km/h)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_2f2d46e225b9f9e220dc6896d97d0c91 = L.polyline.antPath(
+              [[18.502451, 73.842872], [18.500345, 73.842051], [18.498216, 73.841231], [18.497146, 73.840821], [18.496074, 73.84041], [18.495, 73.84], [18.497146, 73.840821], [18.498216, 73.841231], [18.49875, 73.841436], [18.499283, 73.841641], [18.500345, 73.842051], [18.501926, 73.842667], [18.504529, 73.843692], [18.506576, 73.844513], [18.509093, 73.845538], [18.511078, 73.846359], [18.513533, 73.847385], [18.515566, 73.84903], [18.51698, 73.851602], [18.518108, 73.853653], [18.51923, 73.855696], [18.520344, 73.857728], [18.521726, 73.86025], [18.522822, 73.862251], [18.523908, 73.864239], [18.525254, 73.866705], [18.526323, 73.868665], [18.527385, 73.870615], [18.528708, 73.873045], [18.5295, 73.8745], [18.529887, 73.874919], [18.530275, 73.875339], [18.53105, 73.876176], [18.532215, 73.877428], [18.534166, 73.879494], [18.536134, 73.881524], [18.538121, 73.883511], [18.540128, 73.885455], [18.541746, 73.886984], [18.543778, 73.888873], [18.545401, 73.890366], [18.547409, 73.892196], [18.549021, 73.893659], [18.550642, 73.895121], [18.552273, 73.896582], [18.554331, 73.898405], [18.556412, 73.900224], [18.558518, 73.90204], [18.560646, 73.903853], [18.562794, 73.905663], [18.564524, 73.90711], [18.56626, 73.908555], [18.568393, 73.910355], [18.570364, 73.912138], [18.571965, 73.913593], [18.574011, 73.915463], [18.575689, 73.917006], [18.57783, 73.918986], [18.579565, 73.920596], [18.58, 73.921], [18.57783, 73.918986], [18.575689, 73.917006], [18.574011, 73.915463], [18.57237, 73.913961], [18.570364, 73.912138], [18.568785, 73.91071], [18.56713, 73.909278], [18.565825, 73.908194], [18.563658, 73.906387], [18.561932, 73.904939], [18.559792, 73.903128], [18.558095, 73.901677], [18.555994, 73.899861], [18.553918, 73.89804], [18.551864, 73.896217], [18.550236, 73.894756], [18.548618, 73.893294], [18.546605, 73.891464], [18.544593, 73.889625], [18.542964, 73.88812], [18.54134, 73.886604], [18.539725, 73.88507], [18.537722, 73.883117], [18.536134, 73.881524], [18.534166, 73.879494], [18.532604, 73.877843], [18.53105, 73.876176], [18.529887, 73.874919], [18.5295, 73.8745], [18.529236, 73.874015], [18.528972, 73.87353], [18.528444, 73.872559], [18.52765, 73.871102], [18.526589, 73.869153], [18.525522, 73.867196], [18.524179, 73.864734], [18.522822, 73.862251], [18.521726, 73.86025], [18.520622, 73.858234], [18.51923, 73.855696]],
+              {
+  "stroke": true,
+  "color": "#1D3557",
+  "weight": 3.5,
+  "opacity": 0.8,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#1D3557",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1000,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+            ant_path_2f2d46e225b9f9e220dc6896d97d0c91.bindTooltip(
+                `<div>
+                     <b>Vehicle:</b> BUS-R102-04<br><b>Route:</b> North-South Transit Spine (Rail Terminal - Airport)<br><b>Avg Speed:</b> 28.8 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_68032e75c9be97ddcf10e4995949917e = L.circleMarker(
+                [18.51923, 73.855696],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+        var popup_8fe7f82d857d817993d9f5accf5b490b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9583884022d7006f77e909102158a1df = $(`<div id="html_9583884022d7006f77e909102158a1df" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 220px;">             <h4 style="margin: 0 0 5px 0; color: #1D3557;">Bus BUS-R102-04</h4>             <b>Route:</b> North-South Transit Spine (Rail Terminal - Airport)<br>             <b>Instant Speed:</b> <span style="font-weight: bold; color: green;">31.5 km/h</span> (SPI: 70.1%)<br>             <b>Congestion State:</b> Mild Slowdown<br>             <b>Schedule Delay:</b> 159 sec<br>             <b>Passenger Load:</b> 30 pax<br>             <b>Segment:</b> Swargate Central Terminal &rarr; Metropolitan Rail Junction         </div>         </div>`)[0];
+                popup_8fe7f82d857d817993d9f5accf5b490b.setContent(html_9583884022d7006f77e909102158a1df);
+            
+        
+
+        circle_marker_68032e75c9be97ddcf10e4995949917e.bindPopup(popup_8fe7f82d857d817993d9f5accf5b490b)
+        ;
+
+        
+    
+    
+            circle_marker_68032e75c9be97ddcf10e4995949917e.bindTooltip(
+                `<div>
+                     BUS-R102-04 (31.5 km/h)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_f068ee0f10f6d72428bfc1577573a84c = L.polyline.antPath(
+              [[18.58, 73.921], [18.578262, 73.919387], [18.57654, 73.917792], [18.574846, 73.91623], [18.572777, 73.914333], [18.570762, 73.912499], [18.568785, 73.91071], [18.566695, 73.908916], [18.564957, 73.907471], [18.562794, 73.905663], [18.560646, 73.903853], [18.558941, 73.902403], [18.556831, 73.900588], [18.554745, 73.898769], [18.553093, 73.897311], [18.551456, 73.895852], [18.54983, 73.89439], [18.547812, 73.892562], [18.546204, 73.891098], [18.544185, 73.889249], [18.542151, 73.887364], [18.540532, 73.88584], [18.538521, 73.883903], [18.536927, 73.882324], [18.534951, 73.880311], [18.533384, 73.878671], [18.531438, 73.876594], [18.5295, 73.8745], [18.529236, 73.874015], [18.528972, 73.87353], [18.528444, 73.872559], [18.52765, 73.871102], [18.526589, 73.869153], [18.525254, 73.866705], [18.524179, 73.864734], [18.522822, 73.862251], [18.521726, 73.86025], [18.520344, 73.857728], [18.51923, 73.855696], [18.518108, 73.853653], [18.516698, 73.851088], [18.515566, 73.84903], [18.513533, 73.847385], [18.511078, 73.846359], [18.508593, 73.845333], [18.506067, 73.844308], [18.503493, 73.843282], [18.501401, 73.842462], [18.499283, 73.841641], [18.498216, 73.841231], [18.497682, 73.841026], [18.49661, 73.840615], [18.495537, 73.840205], [18.495, 73.84], [18.497146, 73.840821], [18.498216, 73.841231], [18.49875, 73.841436], [18.499814, 73.841846], [18.501401, 73.842462], [18.503493, 73.843282], [18.506067, 73.844308], [18.508092, 73.845128], [18.510584, 73.846154], [18.512553, 73.846974], [18.514511, 73.847795], [18.516132, 73.850059], [18.517545, 73.852628], [18.51895, 73.855186], [18.520344, 73.857728], [18.521451, 73.859747], [18.522822, 73.862251], [18.524179, 73.864734], [18.525522, 73.867196], [18.526589, 73.869153], [18.52765, 73.871102], [18.528708, 73.873045], [18.5295, 73.8745], [18.529887, 73.874919], [18.530275, 73.875339], [18.53105, 73.876176], [18.532604, 73.877843], [18.534559, 73.879903], [18.53653, 73.881925], [18.538121, 73.883511], [18.539725, 73.88507], [18.541746, 73.886984], [18.543778, 73.888873], [18.545803, 73.890732], [18.547812, 73.892562], [18.54983, 73.89439], [18.551864, 73.896217], [18.553918, 73.89804], [18.555994, 73.899861], [18.558095, 73.901677], [18.560218, 73.903491], [18.561932, 73.904939], [18.563658, 73.906387], [18.565391, 73.907832], [18.56713, 73.909278], [18.569179, 73.911065], [18.570762, 73.912499], [18.57237, 73.913961], [18.574011, 73.915463], [18.576114, 73.917398], [18.578262, 73.919387]],
+              {
+  "stroke": true,
+  "color": "#1D3557",
+  "weight": 3.5,
+  "opacity": 0.8,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#1D3557",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1000,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+            ant_path_f068ee0f10f6d72428bfc1577573a84c.bindTooltip(
+                `<div>
+                     <b>Vehicle:</b> BUS-R102-05<br><b>Route:</b> North-South Transit Spine (Rail Terminal - Airport)<br><b>Avg Speed:</b> 29.5 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3958f0deb85d6ab610a93456085e5b8b = L.circleMarker(
+                [18.578262, 73.919387],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+        var popup_f10a5343b11c4464f19d3e2a22eeab09 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_da8d4c469d2e98e5696290f4d6cf7b47 = $(`<div id="html_da8d4c469d2e98e5696290f4d6cf7b47" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 220px;">             <h4 style="margin: 0 0 5px 0; color: #1D3557;">Bus BUS-R102-05</h4>             <b>Route:</b> North-South Transit Spine (Rail Terminal - Airport)<br>             <b>Instant Speed:</b> <span style="font-weight: bold; color: green;">30.5 km/h</span> (SPI: 67.7%)<br>             <b>Congestion State:</b> Mild Slowdown<br>             <b>Schedule Delay:</b> 178 sec<br>             <b>Passenger Load:</b> 38 pax<br>             <b>Segment:</b> Airport Boulevard Station &rarr; International Airport Terminal         </div>         </div>`)[0];
+                popup_f10a5343b11c4464f19d3e2a22eeab09.setContent(html_da8d4c469d2e98e5696290f4d6cf7b47);
+            
+        
+
+        circle_marker_3958f0deb85d6ab610a93456085e5b8b.bindPopup(popup_f10a5343b11c4464f19d3e2a22eeab09)
+        ;
+
+        
+    
+    
+            circle_marker_3958f0deb85d6ab610a93456085e5b8b.bindTooltip(
+                `<div>
+                     BUS-R102-05 (30.5 km/h)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_7af93b3f9e57656eb72e219b3ec3f48e = L.polyline.antPath(
+              [[18.52765, 73.871102], [18.528972, 73.87353], [18.5295, 73.8745], [18.529887, 73.874919], [18.530275, 73.875339], [18.53105, 73.876176], [18.532215, 73.877428], [18.534166, 73.879494], [18.536134, 73.881524], [18.537722, 73.883117], [18.539323, 73.884682], [18.54134, 73.886604], [18.543371, 73.888497], [18.545, 73.89], [18.547007, 73.89183], [18.549021, 73.893659], [18.550642, 73.895121], [18.552683, 73.896947], [18.554331, 73.898405], [18.556412, 73.900224], [18.558095, 73.901677], [18.559792, 73.903128], [18.561932, 73.904939], [18.563658, 73.906387], [18.565825, 73.908194], [18.568, 73.91], [18.569968, 73.911779], [18.571562, 73.913226], [18.573597, 73.915084], [18.575689, 73.917006], [18.57783, 73.918986], [18.58, 73.921], [18.57783, 73.918986], [18.575689, 73.917006], [18.573597, 73.915084], [18.571562, 73.913226], [18.569573, 73.911422], [18.568, 73.91], [18.56626, 73.908555], [18.564524, 73.90711], [18.562363, 73.905301], [18.560218, 73.903491], [18.558518, 73.90204], [18.556412, 73.900224], [18.554331, 73.898405], [18.552273, 73.896582], [18.550642, 73.895121], [18.549021, 73.893659], [18.547409, 73.892196], [18.545401, 73.890366], [18.543778, 73.888873], [18.542151, 73.887364], [18.540128, 73.885455], [18.538521, 73.883903], [18.53653, 73.881925], [18.534951, 73.880311], [18.532994, 73.878258], [18.53105, 73.876176], [18.529887, 73.874919], [18.5295, 73.8745], [18.529236, 73.874015], [18.528972, 73.87353], [18.528444, 73.872559], [18.52765, 73.871102], [18.526589, 73.869153], [18.525254, 73.866705], [18.523908, 73.864239], [18.522549, 73.861752], [18.521451, 73.859747], [18.520344, 73.857728], [18.51923, 73.855696], [18.517826, 73.853141], [18.516415, 73.850574], [18.515, 73.848], [18.512553, 73.846974], [18.510088, 73.845949], [18.507588, 73.844923], [18.505043, 73.843897], [18.502451, 73.842872], [18.500345, 73.842051], [18.49875, 73.841436], [18.498216, 73.841231], [18.497146, 73.840821], [18.496074, 73.84041], [18.495, 73.84], [18.497146, 73.840821], [18.498216, 73.841231], [18.499283, 73.841641], [18.499814, 73.841846], [18.500873, 73.842256], [18.502973, 73.843077], [18.505556, 73.844103], [18.508092, 73.845128], [18.510584, 73.846154], [18.512553, 73.846974], [18.515, 73.848], [18.516415, 73.850574], [18.517545, 73.852628], [18.51895, 73.855186], [18.520066, 73.857221]],
+              {
+  "stroke": true,
+  "color": "#1D3557",
+  "weight": 3.5,
+  "opacity": 0.8,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#1D3557",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1000,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+            ant_path_7af93b3f9e57656eb72e219b3ec3f48e.bindTooltip(
+                `<div>
+                     <b>Vehicle:</b> BUS-R102-06<br><b>Route:</b> North-South Transit Spine (Rail Terminal - Airport)<br><b>Avg Speed:</b> 29.1 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1e3ad42b4eea59dc12e85f42181342ce = L.circleMarker(
+                [18.520066, 73.857221],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+        var popup_81d04c6589b443ecc98491674e26a4f5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8550dd7168ae8034ea73da96bcc84f27 = $(`<div id="html_8550dd7168ae8034ea73da96bcc84f27" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 220px;">             <h4 style="margin: 0 0 5px 0; color: #1D3557;">Bus BUS-R102-06</h4>             <b>Route:</b> North-South Transit Spine (Rail Terminal - Airport)<br>             <b>Instant Speed:</b> <span style="font-weight: bold; color: green;">34.6 km/h</span> (SPI: 77.0%)<br>             <b>Congestion State:</b> Free Flow<br>             <b>Schedule Delay:</b> 129 sec<br>             <b>Passenger Load:</b> 32 pax<br>             <b>Segment:</b> Swargate Central Terminal &rarr; Metropolitan Rail Junction         </div>         </div>`)[0];
+                popup_81d04c6589b443ecc98491674e26a4f5.setContent(html_8550dd7168ae8034ea73da96bcc84f27);
+            
+        
+
+        circle_marker_1e3ad42b4eea59dc12e85f42181342ce.bindPopup(popup_81d04c6589b443ecc98491674e26a4f5)
+        ;
+
+        
+    
+    
+            circle_marker_1e3ad42b4eea59dc12e85f42181342ce.bindTooltip(
+                `<div>
+                     BUS-R102-06 (34.6 km/h)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_f9ca41451ab5d788274d5441ee106442 = L.polyline.antPath(
+              [[18.495, 73.84], [18.497682, 73.841026], [18.498216, 73.841231], [18.499283, 73.841641], [18.499814, 73.841846], [18.501401, 73.842462], [18.503493, 73.843282], [18.506067, 73.844308], [18.508593, 73.845333], [18.510584, 73.846154], [18.513044, 73.847179], [18.515283, 73.848515], [18.516698, 73.851088], [18.518108, 73.853653], [18.51923, 73.855696], [18.520344, 73.857728], [18.521451, 73.859747], [18.522822, 73.862251], [18.523908, 73.864239], [18.525254, 73.866705], [18.526323, 73.868665], [18.52765, 73.871102], [18.528972, 73.87353], [18.5295, 73.8745], [18.529887, 73.874919], [18.530275, 73.875339], [18.53105, 73.876176], [18.532604, 73.877843], [18.534166, 73.879494], [18.535739, 73.881121], [18.537324, 73.882721], [18.538922, 73.884294], [18.540532, 73.88584], [18.542557, 73.887742], [18.544593, 73.889625], [18.546204, 73.891098], [18.548214, 73.892928], [18.54983, 73.89439], [18.551864, 73.896217], [18.553918, 73.89804], [18.555994, 73.899861], [18.557673, 73.901314], [18.559366, 73.902766], [18.561503, 73.904577], [18.563225, 73.906025], [18.565391, 73.907832], [18.567565, 73.909639], [18.569179, 73.911065], [18.570762, 73.912499], [18.57237, 73.913961], [18.574427, 73.915845], [18.57654, 73.917792], [18.578696, 73.91979], [18.58, 73.921], [18.578262, 73.919387], [18.576114, 73.917398], [18.574011, 73.915463], [18.57237, 73.913961], [18.570762, 73.912499], [18.568785, 73.91071], [18.566695, 73.908916], [18.564957, 73.907471], [18.562794, 73.905663], [18.561074, 73.904215], [18.558941, 73.902403], [18.557251, 73.900951], [18.555577, 73.899497], [18.553505, 73.897676], [18.551864, 73.896217], [18.54983, 73.89439], [18.547812, 73.892562], [18.545803, 73.890732], [18.544185, 73.889249], [18.542151, 73.887364], [18.540128, 73.885455], [18.538121, 73.883511], [18.53653, 73.881925], [18.534951, 73.880311], [18.533384, 73.878671], [18.531827, 73.877011], [18.529887, 73.874919], [18.5295, 73.8745], [18.529236, 73.874015], [18.528972, 73.87353], [18.528708, 73.873045], [18.528179, 73.872074]],
+              {
+  "stroke": true,
+  "color": "#1D3557",
+  "weight": 3.5,
+  "opacity": 0.8,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#1D3557",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1000,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+            ant_path_f9ca41451ab5d788274d5441ee106442.bindTooltip(
+                `<div>
+                     <b>Vehicle:</b> BUS-R102-07<br><b>Route:</b> North-South Transit Spine (Rail Terminal - Airport)<br><b>Avg Speed:</b> 29.0 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f352a18ec3c47619675f6370933997be = L.circleMarker(
+                [18.528179, 73.872074],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+        var popup_956b0de26f368adc59a5203fda6888ab = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a53a822b614dce8f42c76dd2e1df85e3 = $(`<div id="html_a53a822b614dce8f42c76dd2e1df85e3" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 220px;">             <h4 style="margin: 0 0 5px 0; color: #1D3557;">Bus BUS-R102-07</h4>             <b>Route:</b> North-South Transit Spine (Rail Terminal - Airport)<br>             <b>Instant Speed:</b> <span style="font-weight: bold; color: green;">31.4 km/h</span> (SPI: 69.7%)<br>             <b>Congestion State:</b> Mild Slowdown<br>             <b>Schedule Delay:</b> 145 sec<br>             <b>Passenger Load:</b> 30 pax<br>             <b>Segment:</b> Swargate Central Terminal &rarr; Metropolitan Rail Junction         </div>         </div>`)[0];
+                popup_956b0de26f368adc59a5203fda6888ab.setContent(html_a53a822b614dce8f42c76dd2e1df85e3);
+            
+        
+
+        circle_marker_f352a18ec3c47619675f6370933997be.bindPopup(popup_956b0de26f368adc59a5203fda6888ab)
+        ;
+
+        
+    
+    
+            circle_marker_f352a18ec3c47619675f6370933997be.bindTooltip(
+                `<div>
+                     BUS-R102-07 (31.4 km/h)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_3e74236a0f37811a40d2c39714fc1fd1 = L.polyline.antPath(
+              [[18.524464, 73.884247], [18.525757, 73.881687], [18.527346, 73.878609], [18.52869, 73.876041], [18.5295, 73.8745], [18.529615, 73.87396], [18.529731, 73.873419], [18.529961, 73.872338], [18.530424, 73.870172], [18.53089, 73.867999], [18.531479, 73.865268], [18.532078, 73.862518], [18.532687, 73.859744], [18.533306, 73.856947], [18.533936, 73.854127], [18.534575, 73.851288], [18.535221, 73.848435], [18.53587, 73.845573], [18.536758, 73.842899], [18.537686, 73.840243], [18.538576, 73.837528], [18.539254, 73.835303], [18.540064, 73.832463], [18.54069, 73.830158], [18.541, 73.829], [18.541371, 73.828569], [18.541743, 73.828137], [18.542485, 73.827275], [18.543965, 73.825549], [18.545804, 73.823392], [18.547621, 73.821235], [18.549414, 73.819078], [18.551179, 73.816922], [18.552916, 73.814765], [18.554627, 73.812608], [18.556318, 73.810451], [18.557661, 73.808725], [18.558331, 73.807863], [18.558666, 73.807431], [18.559, 73.807], [18.558666, 73.807431], [18.558331, 73.807863], [18.557996, 73.808294], [18.557326, 73.809157], [18.556318, 73.810451], [18.554967, 73.812176], [18.55326, 73.814333], [18.551877, 73.816059], [18.550123, 73.818216], [18.548342, 73.820373], [18.546534, 73.822529], [18.544703, 73.824686], [18.542856, 73.826843], [18.541371, 73.828569], [18.540845, 73.829579], [18.540535, 73.830736], [18.540064, 73.832463], [18.539254, 73.835303], [18.538576, 73.837528], [18.537867, 73.839706], [18.537133, 73.841842], [18.53619, 73.844476], [18.53561, 73.846718], [18.534962, 73.849577], [18.534447, 73.851857], [18.53381, 73.854693], [18.533181, 73.857508], [18.532564, 73.860301], [18.531957, 73.86307], [18.531361, 73.865816], [18.530773, 73.868543], [18.530192, 73.871255], [18.529731, 73.873419], [18.5295, 73.8745], [18.52923, 73.875014], [18.52896, 73.875528], [18.52842, 73.876555], [18.527613, 73.878096], [18.526283, 73.880661], [18.525236, 73.882712], [18.524209, 73.884759], [18.523204, 73.886803], [18.521978, 73.889354], [18.520783, 73.891901], [18.519613, 73.894443], [18.51846, 73.896984], [18.518, 73.898], [18.519151, 73.89546], [18.520079, 73.893427], [18.521257, 73.890882], [18.52222, 73.888844], [18.523453, 73.886292], [18.52472, 73.883736], [18.52602, 73.881174], [18.527346, 73.878609], [18.52869, 73.876041], [18.5295, 73.8745], [18.529615, 73.87396], [18.529731, 73.873419], [18.529961, 73.872338]],
+              {
+  "stroke": true,
+  "color": "#2A9D8F",
+  "weight": 3.5,
+  "opacity": 0.8,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#2A9D8F",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1000,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+            ant_path_3e74236a0f37811a40d2c39714fc1fd1.bindTooltip(
+                `<div>
+                     <b>Vehicle:</b> BUS-R103-01<br><b>Route:</b> Radial Ring Corridor (East-West Bypass)<br><b>Avg Speed:</b> 27.5 km/h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1c7c7f40dec2668898a4fdefc2c0cedb = L.circleMarker(
+                [18.529961, 73.872338],
+                {"bubblingMouseEvents": true, "color": "#000000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_d2c71589e8a398e4bbbcc44590224298);
+        
+    
+        var popup_8ac51d05bf14d24b72d0f396b9503128 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_fb5d269fdde4e96544199dae1285720b = $(`<div id="html_fb5d269fdde4e96544199dae1285720b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 220px;">             <h4 style="margin: 0 0 5px 0; color: #1D3557;">Bus BUS-R103-01</h4>             <b>Route:</b> Radial Ring Corridor (East-West Bypass)<br>             <b>Instant Speed:</b> <span style="font-weight: bold; color: orange;">25.4 km/h</span> (SPI: 55.1%)<br>             <b>Congestion State:</b> Mild Slowdown<br>             <b>Schedule Delay:</b> 209 sec<br>             <b>Passenger Load:</b> 37 pax<br>             <b>Segment:</b> Civic Plaza &rarr; Metropolitan Rail Junction         </div>         </div>`)[0];
+                popup_8ac51d05bf14d24b72d0f396b9503128.setContent(html_fb5d269fdde4e96544199dae1285720b);
+            
+        
+
+        circle_marker_1c7c7f40dec2668898a4fdefc2c0cedb.bindPopup(popup_8ac51d05bf14d24b72d0f396b9503128)
+        ;
+
+        
+    
+    
+            circle_marker_1c7c7f40dec2668898a4fdefc2c0cedb.bindTooltip(
+                `<div>
+                     BUS-R103-01 (25.4 km/h)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_d2c71589e8a398e4bbbcc44590224298.addTo(map_98b74fb001664dd71cf43a68ca382cab);
+        
+</script>
+</html>
